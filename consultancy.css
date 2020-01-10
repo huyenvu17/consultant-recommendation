@@ -1,0 +1,168 @@
+/* Fake AI Consutant Site  */
+:root {
+  --alt-common-red: #E21F26;
+  --alt-blue-sky: #96d2e3;
+  --alt-common-black: #180D0E;
+  --alt-text-dark-blue: #1F3A55;
+  --alt-common-white: #fff;
+}
+/*#region input properties*/
+/* label color */
+.consultancy .consultancy__content .tab-content .input-field > label {
+    color: var(--alt-common-black);
+    font-weight: normal;
+    font-size: 14px;
+  }
+  .consultancy .consultancy__content .tab-content .input-field>label:not(.label-icon).active {
+    -webkit-transform: translateY(-14px) scale(0.95);
+    transform: translateY(-14px) scale(0.95);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    font-weight: normal;
+  }
+  /* label focus color */
+  .consultancy .consultancy__content .tab-content .input-field input[type=text]:focus + label {
+    color: var(--alt-common-red);
+  }
+  /* label underline focus color */
+  .consultancy .consultancy__content .tab-content .input-field input:focus {
+    border-bottom: 1px solid var(--alt-blue-sky)!important;
+    box-shadow: 0 1px 0 0 var(--alt-blue-sky)!important;
+  }
+  /* valid color */
+  .consultancy .consultancy__content .tab-content .input-field input.valid {
+    border-bottom: 1px solid var(--alt-common-black);
+    box-shadow: 0 1px 0 0 var(--alt-common-black);
+    font-weight: bold;
+    color: var(--alt-text-dark-blue);
+  }
+  .consultancy .consultancy__content .tab-content .input-field input:focus.valid ~ label {
+    color: var(--alt-blue-sky);
+  }
+  .consultancy .consultancy__content .tab-content .input-field input:not(.browser-default):focus:not([readonly])+label {
+    color:var(--alt-text-dark-blue);
+  }
+  /* invalid color */
+  .consultancy .consultancy__content .tab-content .input-field input.invalid {
+    border-bottom: 1px solid var(--alt-common-red);
+    box-shadow: 0 1px 0 0 var(--alt-common-red);
+  }
+  /* icon prefix focus color */
+  .consultancy .consultancy__content .tab-content .input-field .prefix.active, .label-required {
+    color: var(--alt-common-red);
+  }
+  .consultancy .consultancy__content .tab-content .personal-info-form .input-dob .datepicker-modal {
+      top:auto;
+      bottom: auto;
+      background-color: transparent;
+  }
+  .consultancy .consultancy__content .tab-content .personal-info-form .datepicker-date-display {
+      background-color: var(--alt-blue-sky);
+      color: var(--alt-common-black);
+  }
+  .consultancy .consultancy__content .tab-content .personal-info-form .datepicker-date-display .year-text {
+    color: var(--alt-common-black);
+  }
+  .consultancy .consultancy__content .tab-content .personal-info-form .datepicker-table td.is-selected {
+    background-color: var(--alt-blue-sky);
+    color: var(--alt-common-black);
+}
+.consultancy .consultancy__content .tab-content .personal-info-form .datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+    color: var(--alt-common-black);
+    font-weight: bold;
+}
+  .consultancy .consultancy__content .tab-content .personal-info-form .calendar-icon {
+    position: absolute;
+    right: 15px;
+    font-size: 20px;
+    bottom: 38px;
+}
+.consultancy .consultancy__content .tab-content .personal-info-form .dropdown-content li>a, .dropdown-content li>span {
+    color: var(--alt-common-black);
+}
+.consultancy .consultancy__content .tab-content .personal-info-form .select-wrapper input.select-dropdown {
+    font-weight: bold;
+    color: var(--alt-text-dark-blue);
+}
+.consultancy .consultancy__content .tab-content .personal-info-form .score-group-label {
+  top:-10px!important;
+}
+.consultancy .consultancy__content .tab-content .personal-info-form .input-field-custom-margin-vertical {
+  margin-top:0;
+  margin-bottom: -50px;
+}
+/*#endregion*/
+
+/*#region general*/
+.flex-box {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+.consultancy {
+    height: 100%;
+    background-color: var(--alt-blue-sky);
+    color: var(--alt-common-black);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 2%;
+}
+.consultancy .consultancy__logo {
+    width: 100px;
+    margin: auto;
+}
+.consultancy .consultancy__content {
+    background-color:var(--alt-common-white);
+    margin:15px auto;
+    padding: 4% 10%;
+}
+.child-score {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+
+}
+.skill-score {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: baseline;
+    -webkit-box-align: baseline;
+    margin: auto 5px;
+}
+/*#endregion*/
+
+/*#region steps panel*/
+.consultancy .consultancy__content .steps-panel {
+    list-style: none;
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+
+}
+.consultancy .consultancy__content .steps-panel li {
+    padding: 10px 0;
+    text-align: center;
+}
+.consultancy .consultancy__content .steps-panel li a{
+    color: #180D0E;
+    font-weight: bold;
+}
+.consultancy .consultancy__content .steps-panel>li.active>a, .consultancy .consultancy__content .steps-panel>li.active>a:focus, .consultancy .consultancy__content .steps-panel>li.active>a:hover {
+    color: var(--alt-common-red);
+    background-color: transparent;
+    font-weight: bold;
+}
+.consultancy .consultancy__content .steps-panel>li>a:hover, .consultancy .consultancy__content .steps-panel>li>a:focus {
+    color: var(--alt-common-black);
+    background-color: transparent;
+}
+/*#endregion*/
