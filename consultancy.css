@@ -1,4 +1,4 @@
-/* Fake AI Consutant Site  */
+/* Fake AI Consultant Site  */
 :root {
   --alt-common-red: #E21F26;
   --alt-blue-sky: #96d2e3;
@@ -14,8 +14,8 @@
     font-size: 14px;
   }
   .consultancy .consultancy__content .tab-content .input-field>label:not(.label-icon).active {
-    -webkit-transform: translateY(-14px) scale(0.95);
-    transform: translateY(-14px) scale(0.95);
+    -webkit-transform: translateY(-14px) scale(1);
+    transform: translateY(-14px) scale(1);
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
     font-weight: normal;
@@ -91,6 +91,47 @@
   margin-top:0;
   margin-bottom: -50px;
 }
+.consultancy .consultancy__content .tab-content input[type="radio"]:checked+span:after, .consultancy .consultancy__content .tab-content input[type="radio"].with-gap:checked+span:after {
+  background-color: var(--alt-text-dark-blue);
+}
+.consultancy .consultancy__content .tab-content input[type="radio"]:checked+span:after, 
+.consultancy .consultancy__content .tab-content input[type="radio"].with-gap:checked+span:before, 
+.consultancy .consultancy__content .tab-content input[type="radio"].with-gap:checked+span:after,
+.consultancy .consultancy__content .tab-content input[type="radio"]:not(:checked)+span:before, .consultancy .consultancy__content .tab-content input[type="radio"]:not(:checked)+span:after {
+  border: 1px solid var(--alt-text-dark-blue);
+}
+.consultancy .consultancy__content a.back-link {
+  color: var(--alt-common-black);
+  font-weight: bold;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.consultancy .consultancy__content .btn-next, .consultancy .consultancy__content .btn-next:hover, .btn-next:focus {
+  background-color: var(--alt-common-red);
+  color: var(--alt-common-white);
+  font-weight: bold;
+  text-transform: none;
+}
+.radio-choice label{
+  color: var(--alt-common-black);
+  font-weight: bold;
+}
+.inline-text {
+ margin-bottom: 40px;
+}
+label.zero-left {
+  left: 0!important;
+}
+.no-mrg {
+  margin: 0px;
+}
+.budget-slider {
+  margin-top: 2%;
+  margin-bottom: 8%;
+}
+.result-links {
+  margin: 20% auto;
+}
 /*#endregion*/
 
 /*#region general*/
@@ -136,6 +177,9 @@
     -webkit-box-align: baseline;
     margin: auto 5px;
 }
+.consultancy .consultancy__content .tab-content .row{
+  margin-bottom: 0;
+}
 /*#endregion*/
 
 /*#region steps panel*/
@@ -153,9 +197,10 @@
     text-align: center;
 }
 .consultancy .consultancy__content .steps-panel li a{
-    color: #180D0E;
-    font-weight: bold;
+  color: var(--alt-common-black);
+  font-weight: bold;
 }
+
 .consultancy .consultancy__content .steps-panel>li.active>a, .consultancy .consultancy__content .steps-panel>li.active>a:focus, .consultancy .consultancy__content .steps-panel>li.active>a:hover {
     color: var(--alt-common-red);
     background-color: transparent;
