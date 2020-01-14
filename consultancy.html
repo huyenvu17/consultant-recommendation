@@ -36,17 +36,28 @@
         <div class="row">
           <div class="col-xs-12">
             <ul class="nav nav-pills steps-panel">
-              <li class="col-md-4 col-sm-4 col-xs-4 active"><a data-toggle="pill" href="#step1">Thông tin cơ bản</a>
+              <li class="col-md-4 col-sm-4 col-xs-4 active" data-step="1">
+                <a href="#step1">
+                <span>Thông tin cơ bản</span>
+              </a>
               </li>
-              <li class="col-md-4 col-sm-4 col-xs-4"><a data-toggle="pill" href="#step2">Cá nhân hóa khóa học</a></li>
-              <li class="col-md-4 col-sm-4 col-xs-4"><a data-toggle="pill" href="#step3">Kết quả</a></li>
+              <li class="col-md-4 col-sm-4 col-xs-4 step-mrg-left" data-step="2">
+                <a href="#step2">
+                <span>Cá nhân hóa khóa học</span>
+              </a>
+            </li>
+              <li class="col-md-4 col-sm-4 col-xs-4 step-mrg-left text-right" data-step="3">
+                <a href="#step3">
+                  <span>Kết quả</span>
+                </a>
+              </li>
             </ul>
 
           </div>
         </div>
         <div class="tab-content">
           <!-- Step 1 - personal information-->
-          <div id="step1" class="row personal-info-form">
+          <div id="step1" class="row personal-info-form step-form">
             <div class="col s12">
               <div class="row">
                 <div class="input-field col s6">
@@ -254,13 +265,13 @@
                 </div>
               </div>
               <div class="row text-center">
-                <a href="#0" class="back-link">Reset</a>
-                <a class="waves-effect waves-light btn btn-next">Tiếp</a>
+                <a href="#0" class="back-link btn-reset">Reset</a>
+                <a class="waves-effect waves-light btn btn-next js-next">Tiếp</a>
               </div>
             </div>
           </div>
           <!-- Step 2 - personalized learning course-->
-          <div id="step2" class="row learning-course-form" style="display: none;" >
+          <div id="step2" class="row learning-course-form step-form" style="display: none;" >
             <div class="col s12">
               <div class="row">
                 <div class="input-field col s6 no-mrg">
@@ -387,17 +398,20 @@
                 </div>
               </div>
               <div class="row text-center">
-                <a href="#0" class="back-link">Trở về</a>
-                <a class="waves-effect waves-light btn btn-next">Tiếp</a>
+                <a href="#0" class="back-link btn-prev">Trở về</a>
+                <a class="waves-effect waves-light btn btn-next js-personal-info ">Tiếp</a>
               </div>
             </div>
-            <!-- Step 3 - Finish -->
-            <div id="step3" class="row result-form" style="display: none;">
-              <div class="col s12">
-                <div class="row text-center result-links">
-                  <a href="#0" class="back-link">làm lại khảo sát</a>
-                  <a class="waves-effect waves-light btn btn-next">Xem kết quả</a>
-                </div>
+          </div>
+          <!-- Step 3 - Finish -->
+          <div id="step3" class="row result-form step-form" style="display: none;">
+            <div class="col s12">
+              <div style="width: 60%;margin: auto;">
+                <img src="logo-alt.svg" alt="">
+              </div>
+              <div class="row text-center result-links">
+                <a href="#0" class="back-link btn-reload">làm lại khảo sát</a>
+                <a class="waves-effect waves-light btn btn-next js-result-form">Xem kết quả</a>
               </div>
             </div>
           </div>

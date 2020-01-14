@@ -1,12 +1,15 @@
 var consultancy = (function () {
     var initConsultancy  = function () {
-        dobPicker();
-        itemSelect();
-        textInputCount();
-        budgetPlan();
+        dob_picker();
+        item_select();
+        text_input_count();
+        budget_plan();
+        personal_info();
+        personalized_learning_course();
+        result_form();
     };
 
-    function dobPicker() {
+    function dob_picker() {
         var currYear = (new Date()).getFullYear();
         $('.datepicker').datepicker(
             {
@@ -18,20 +21,20 @@ var consultancy = (function () {
             }
         );
     }
-    function itemSelect() {
+    function item_select() {
         $('select').formSelect();
     }
-    function textInputCount() {
+    function text_input_count() {
         $('textarea#note').characterCounter();
     }
-    function budgetPlan() {
+    function budget_plan() {
         var slider = document.getElementById('test-slider');
         noUiSlider.create(slider, {
             start: [0, 5000000],
             connect: true,
             step: 500000,
             tooltips: true,
-            orientation: 'horizontal', // 'horizontal' or 'vertical'
+            orientation: 'horizontal',
             range: {
                 'min': 3000000,
                 'max': 12000000
@@ -48,6 +51,43 @@ var consultancy = (function () {
             }
         });
     }
+    function personal_info() {
+        $('.js-next').click(function () {
+            var step1 = $(".steps-panel li").eq(0);
+            $('#step2').fadeIn('slow');
+            $('#step1').fadeOut();
+            $('.active').next().addClass('active');
+            step1.removeClass('active');
+        });
+        $('.btn-reset').click(function () {
+            $("input").val('');
+        });
+    }
+    function personalized_learning_course() {
+        var step1 = $(".steps-panel li").eq(0);
+        var step2 = $(".steps-panel li").eq(1);
+        $('.js-personal-info').click(function () {
+            $('#step3').fadeIn('slow');
+            $('#step2').hide();
+            $('.active').next().addClass('active active1');
+            step2.removeClass('active');
+        });
+        $('.btn-prev').click(function () {
+            $('#step1').fadeIn('slow');
+            $('#step2').fadeOut();
+            step2.removeClass('active');
+            step1.addClass('active');
+        });
+    }
+    function result_form() {
+        $(".js-result-form").click(function() { 
+            window.location.replace('consultancy-result.html')
+        });
+        $('.btn-reload').click(function () {
+            location.reload();
+        });
+    }
+
     return {
         initConsultancy
     }
