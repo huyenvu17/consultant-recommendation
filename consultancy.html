@@ -2,284 +2,358 @@
 <html lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fake AI Consultant</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fake AI Consultant</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap&subset=vietnamese"
-    rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap&subset=vietnamese" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="consultancy.css">
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="consultancy.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 </head>
 
 <body>
-  <div class="consultancy">
-    <div class="container">
-      <div class="consultancy__logo">
-        <img src="logo-alt.svg" alt="">
-      </div>
-      <div class="consultancy__content">
-        <div class="row">
-          <div class="col-xs-12">
-            <ul class="nav nav-pills steps-panel">
-              <li class="col-md-4 col-sm-4 col-xs-4 active"><a data-toggle="pill" href="#step1">Thông tin cơ bản</a>
-              </li>
-              <li class="col-md-4 col-sm-4 col-xs-4"><a data-toggle="pill" href="#step2">Cá nhân hóa khóa học</a></li>
-              <li class="col-md-4 col-sm-4 col-xs-4"><a data-toggle="pill" href="#step3">Kết quả</a></li>
-            </ul>
+    <div class="consultancy">
+        <div class="container">
+            <div class="consultancy__logo">
+                <img src="logo-alt.svg" alt="">
+            </div>
+            <div class="consultancy__content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="nav nav-pills steps-panel">
+                            <li class="col-md-4 col-sm-4 col-xs-4 active"><a data-toggle="pill" href="#step1">Thông tin cơ bản</a>
+                            </li>
+                            <li class="col-md-4 col-sm-4 col-xs-4"><a data-toggle="pill" href="#step2">Cá nhân hóa khóa học</a></li>
+                            <li class="col-md-4 col-sm-4 col-xs-4"><a data-toggle="pill" href="#step3">Kết quả</a></li>
+                        </ul>
 
-          </div>
-        </div>
-        <div class="tab-content">
-          <div id="step1" class="row personal-info-form">
-            <div class="col s12">
-              <div class="row">
-                <div class="input-field col s6">
-                  <input placeholder="" id="fullname" type="text" required class="validate">
-                  <label for="fullname">Họ và tên <span class="label-required">*</span></label>
-                  <span class="helper-text" data-error="vui lòng nhập họ tên"></span>
+                    </div>
                 </div>
-                <div class="input-field input-dob col s6">
-                  <input placeholder="" id="fullname" type="text" required class="datepicker validate"
-                    format="dd/mm/yyyy">
-                  <i class="far fa-calendar calendar-icon"></i>
-                  <label for="fullname">Ngày tháng năm sinh <span class="label-required">*</span></label>
-                  <span class="helper-text" data-error="vui lòng nhập ngày sinh"></span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s6">
-                  <input placeholder="" id="tel" type="tel" class="validate" required>
-                  <label for="tel">Số điện thoại <span class="label-required">*</span></label>
-                  <span class="helper-text" data-error="vui lòng nhập số điện thoại"></span>
-                </div>
-                <div class="input-field col s6">
-                  <input placeholder="" id="email" type="email" class="validate" required="Vui lòng nhập email">
-                  <label for="email">Email <span class="label-required">*</span></label>
-                  <span class="helper-text"
-                    data-error="Vui lòng nhập đúng định dạng email. Ví dụ: alt@gmail.com"></span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s6">
-                  <select id="occupation">
+                <div class="tab-content">
+                    <div id="step1" class="row personal-info-form">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="" id="fullname" type="text" required class="validate">
+                                    <label for="fullname">Họ và tên <span class="label-required">*</span></label>
+                                    <span class="helper-text" data-error="vui lòng nhập họ tên"></span>
+                                </div>
+                                <div class="input-field input-dob col s6">
+                                    <input placeholder="" id="fullname" type="text" required class="datepicker validate" format="dd/mm/yyyy">
+                                    <i class="far fa-calendar calendar-icon"></i>
+                                    <label for="fullname">Ngày tháng năm sinh <span class="label-required">*</span></label>
+                                    <span class="helper-text" data-error="vui lòng nhập ngày sinh"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="" id="tel" type="tel" class="validate" required>
+                                    <label for="tel">Số điện thoại <span class="label-required">*</span></label>
+                                    <span class="helper-text" data-error="vui lòng nhập số điện thoại"></span>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="" id="email" type="email" class="validate" required="Vui lòng nhập email">
+                                    <label for="email">Email <span class="label-required">*</span></label>
+                                    <span class="helper-text" data-error="Vui lòng nhập đúng định dạng email. Ví dụ: alt@gmail.com"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <select id="occupation">
                     <option value="" disabled>Chọn nghề nghiệp</option>
                     <option value="1">Người đi làm</option>
                     <option value="2" selected>Sinh viên</option>
                     <option value="3">Học sinh</option>
                   </select>
-                  <label>Nghề nghiệp <span class="label-required">*</span></label>
-                </div>
-                <div class="input-field col s6">
-                  <textarea placeholder="" id="learningPurposes" class="materialize-textarea"></textarea>
-                  <label for="learningPurposes">Mục đích học IELTS</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s6">
-                  <input placeholder="" id="desiredTime" type="text" required class="validate">
-                  <label for="desiredTime">Thời gian cần lấy bằng <span class="label-required">*</span></label>
-                  <span class="helper-text" data-error="vui lòng nhập thời gian cần lấy bằng"></span>
-                </div>
-                <div class="input-field col s6">
-                  <select id="branch" required class="validate">
+                                    <label>Nghề nghiệp <span class="label-required">*</span></label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <textarea placeholder="" id="learningPurposes" class="materialize-textarea"></textarea>
+                                    <label for="learningPurposes">Mục đích học IELTS</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="" id="desiredTime" type="text" required class="validate">
+                                    <label for="desiredTime">Thời gian cần lấy bằng <span class="label-required">*</span></label>
+                                    <span class="helper-text" data-error="vui lòng nhập thời gian cần lấy bằng"></span>
+                                </div>
+                                <div class="input-field col s6">
+                                    <select id="branch" required class="validate">
                     <option value="" disabled>Chọn nghề nghiệp</option>
                     <option value="1">Phan Chu Trinh</option>
                     <option value="2">Hoàng Văn Thụ</option>
                     <option value="3">Bàu Cát</option>
                     <option value="4">Lê Hồng Phong</option>
                   </select>
-                  <label>Chi nhánh học <span class="label-required">*</span></label>
-                  <span class="helper-text" data-error="vui lòng chọn chi nhánh học"></span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s6">
-                  <div class="input-field input-field-custom-margin-vertical">
-                    <div class="">
-                      <span>Overal</span>
-                      <div class="input-field inline">
-                        <select id="overalScore">
+                                    <label>Chi nhánh học <span class="label-required">*</span></label>
+                                    <span class="helper-text" data-error="vui lòng chọn chi nhánh học"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <div class="input-field input-field-custom-margin-vertical">
+                                        <div class="">
+                                            <span>Overal</span>
+                                            <div class="input-field inline">
+                                                <select id="overalScore">
                           <option value="" disabled>Chọn điểm</option>
                           <option value="1">4.0</option>
                           <option value="2" selected>4.5</option>
                           <option value="3">5.0</option>
                         </select>
-                      </div>
-                    </div>
-                    <label class="score-group-label">Điểm đầu vào <span class="label-required">*</span></label>
-                    <span class="helper-text" data-error="vui lòng chọn điểm"></span>
-                  </div>
+                                            </div>
+                                        </div>
+                                        <label class="score-group-label">Điểm đầu vào <span class="label-required">*</span></label>
+                                        <span class="helper-text" data-error="vui lòng chọn điểm"></span>
+                                    </div>
 
-                  <div class="child-score">
-                    <div class="skill-score">
-                      <span>L</span>
-                      <div class="input-field inline">
-                        <select id="listeningScore">
+                                    <div class="child-score">
+                                        <div class="skill-score">
+                                            <span>L</span>
+                                            <div class="input-field inline">
+                                                <select id="listeningScore">
                           <option value="" disabled>Chọn mức điểm</option>
                           <option value="1">4.0</option>
                           <option value="2" selected>4.5</option>
                           <option value="3">5.0</option>
                         </select>
-                      </div>
-                    </div>
-                    <div class="skill-score">
-                      <span>R</span>
-                      <div class="input-field inline">
-                        <select id="readingScore">
+                                            </div>
+                                        </div>
+                                        <div class="skill-score">
+                                            <span>R</span>
+                                            <div class="input-field inline">
+                                                <select id="readingScore">
                           <option value="" disabled>Chọn nghề nghiệp</option>
                           <option value="1">4.0</option>
                           <option value="2" selected>4.5</option>
                           <option value="3">5.0</option>
                         </select>
-                      </div>
-                    </div>
-                    <div class="skill-score">
-                      <span>W</span>
-                      <div class="input-field inline">
-                        <select id="writingScore">
+                                            </div>
+                                        </div>
+                                        <div class="skill-score">
+                                            <span>W</span>
+                                            <div class="input-field inline">
+                                                <select id="writingScore">
                           <option value="" disabled>Chọn mức điểm</option>
                           <option value="1">4.0</option>
                           <option value="2" selected>4.5</option>
                           <option value="3">5.0</option>
                         </select>
-                      </div>
-                    </div>
-                    <div class="skill-score">
-                      <span>S</span>
-                      <div class="input-field inline">
-                        <select id="speakingScore">
+                                            </div>
+                                        </div>
+                                        <div class="skill-score">
+                                            <span>S</span>
+                                            <div class="input-field inline">
+                                                <select id="speakingScore">
                           <option value="" disabled>Chọn mức điểm</option>
                           <option value="1">4.0</option>
                           <option value="2" selected>4.5</option>
                           <option value="3">5.0</option>
                         </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6">
-                  <div class="input-field input-field-custom-margin-vertical">
-                    <div class="">
-                      <span>Overal</span>
-                      <div class="input-field inline">
-                        <select id="overalScore">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s6">
+                                    <div class="input-field input-field-custom-margin-vertical">
+                                        <div class="">
+                                            <span>Overal</span>
+                                            <div class="input-field inline">
+                                                <select id="overalScore">
                           <option value="" disabled>Chọn điểm</option>
                           <option value="1">4.0</option>
                           <option value="2" selected>4.5</option>
                           <option value="3">5.0</option>
                         </select>
-                      </div>
-                    </div>
-                    <label class="score-group-label">Điểm mong muốn <span class="label-required">*</span></label>
-                    <span class="helper-text" data-error="vui lòng chọn điểm"></span>
-                  </div>
+                                            </div>
+                                        </div>
+                                        <label class="score-group-label">Điểm mong muốn <span class="label-required">*</span></label>
+                                        <span class="helper-text" data-error="vui lòng chọn điểm"></span>
+                                    </div>
 
-                  <div class="child-score">
-                    <div class="skill-score">
-                      <span>L</span>
-                      <div class="input-field inline">
-                        <select id="listeningScore">
+                                    <div class="child-score">
+                                        <div class="skill-score">
+                                            <span>L</span>
+                                            <div class="input-field inline">
+                                                <select id="listeningScore">
                           <option value="" disabled>Chọn mức điểm</option>
                           <option value="1">4.0</option>
                           <option value="2" selected>4.5</option>
                           <option value="3">5.0</option>
                         </select>
-                      </div>
-                    </div>
-                    <div class="skill-score">
-                      <span>R</span>
-                      <div class="input-field inline">
-                        <select id="readingScore">
+                                            </div>
+                                        </div>
+                                        <div class="skill-score">
+                                            <span>R</span>
+                                            <div class="input-field inline">
+                                                <select id="readingScore">
                           <option value="" disabled>Chọn mức điểm</option>
                           <option value="1">4.0</option>
                           <option value="2" selected>4.5</option>
                           <option value="3">5.0</option>
                         </select>
-                      </div>
-                    </div>
-                    <div class="skill-score">
-                      <span>W</span>
-                      <div class="input-field inline">
-                        <select id="writingScore">
+                                            </div>
+                                        </div>
+                                        <div class="skill-score">
+                                            <span>W</span>
+                                            <div class="input-field inline">
+                                                <select id="writingScore">
                           <option value="" disabled>Chọn mức điểm</option>
                           <option value="1">4.0</option>
                           <option value="2" selected>4.5</option>
                           <option value="3">5.0</option>
                         </select>
-                      </div>
-                    </div>
-                    <div class="skill-score">
-                      <span>S</span>
-                      <div class="input-field inline">
-                        <select id="speakingScore">
+                                            </div>
+                                        </div>
+                                        <div class="skill-score">
+                                            <span>S</span>
+                                            <div class="input-field inline">
+                                                <select id="speakingScore">
                           <option value="" disabled>Chọn mức điểm</option>
                           <option value="1">4.0</option>
                           <option value="2" selected>4.5</option>
                           <option value="3">5.0</option>
                         </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="input-field col s6">
-                  <select id="occupation">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-field col s6">
+                                    <select id="occupation">
                     <option value="" disabled>Chọn nghề nghiệp</option>
                     <option value="1">Người đi làm</option>
                     <option value="2" selected>Sinh viên</option>
                     <option value="3">Học sinh</option>
                   </select>
-                  <label>Nghề nghiệp <span class="label-required">*</span></label>
+                                    <label>Nghề nghiệp <span class="label-required">*</span></label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+
+                                    <table class="abcd" style="margin-top: 20px">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 0;">
+                                                    <table class="efgh setting" style="border-left: 1px solid #ddd;width: 60px;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="ijkl" style="
+                                      display: flex;
+                                      flex-direction: column;
+                                      position:relative;
+                                      padding-top: inherit;
+                                      ">
+                                                                    <span style="text-align: end;margin-bottom: 8px;
+                                                                    margin-top: 5px;">Thứ</span>
+                                                                    <span style="text-align: start;">Buổi</span></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr height="50">
+                                                                <td><span>Sáng</span></td>
+                                                            </tr>
+                                                            <tr height="50">
+                                                                <td><span>Chiều</span></td>
+                                                            </tr>
+                                                            <tr height="50">
+                                                                <td><span>Tối</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="padding: 0;">
+                                                    <table class="efgh mnop table-hover table-condensed table-bordered" style="table-layout: fixed">
+                                                        <thead>
+                                                            <tr>
+                                                                <th id="t2">Hai</th>
+                                                                <th id="t3">Ba</th>
+                                                                <th id="t4">Tư</th>
+                                                                <th id="t5">Năm</th>
+                                                                <th id="t6">Sáu</th>
+                                                                <th id="t7">Bảy</th>
+                                                                <th id="cn">CN</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr id="sang" value="1">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr id="chieu" value="2">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr id="toi" value="3">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr id="delete-table" height="0" style="border-bottom: 1px solid transparent!important;" title="Clear all">
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <label style="top: -30px;">Thời gian học <span class="label-required">*</span></label>
+
+                                    <a onclick="consultancy.getTimeTableData(true)">Check array</a><br>
+                                    <a onclick="consultancy.getTimeTableData()">Check ids</a>
+
+                                </div>
+                                <div class="input-field col s6">
+                                    <textarea placeholder="" id="note" class="materialize-textarea"></textarea>
+                                    <label for="note">Ghi chú</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s6">
-                  <select id="occupation">
-                    <option value="" disabled>Chọn nghề nghiệp</option>
-                    <option value="1">Người đi làm</option>
-                    <option value="2" selected>Sinh viên</option>
-                    <option value="3">Học sinh</option>
-                  </select>
-                  <label>Nghề nghiệp <span class="label-required">*</span></label>
-                </div>
-                <div class="input-field col s6">
-                  <textarea placeholder="" id="note" class="materialize-textarea"></textarea>
-                  <label for="note">Ghi chú</label>
-                </div>
-              </div>
+
             </div>
-          </div>
         </div>
-
-      </div>
     </div>
-  </div>
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Bootstrap JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="consultancy.js"></script>
-  <script>
-    $(document).ready(function () {
-      consultancy.initConsultancy();
-    });
-  </script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="consultancy.js"></script>
+    <script>
+        $(document).ready(function() {
+            consultancy.initConsultancy();
+        });
+    </script>
 </body>
 
 </html>
