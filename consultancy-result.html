@@ -18,16 +18,611 @@
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="extras/nouislider.css">
   <link rel="stylesheet" href="consultancy.css">
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-</head>
+  <link rel="stylesheet" href="dashboard/page-layout.css">
+  <link rel="stylesheet" href="dashboard/consultancy-result-dashboard.css">
 
+</head>
 <body>
-        <div>result page</div>
+  <div class="user-dashboard">
+    <div class="container-fluid">
+        <div class="page-vertical-mrg">
+            <div class="row">
+                <!-- User's information -->
+                <div class="user-dashboard__information col-lg-3 col-md-4">
+                  <div class="main-heading pdd-btm-20">Danh sách giáo viên</div>
+                  <div class="panel-group teacher-list" id="accordion">
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                              <img src="https://via.placeholder.com/30" alt="" class="teacher-avatar">
+                              <span class="main-heading">Ms. Nguyễn Thị Bích Thuận</span>
+                            </a>
+                        </h4>
+                      </div>
+                      <div id="collapse1" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div>IELTS 7.5</div>
+                            <div>Social Sciences and Humanities Uni. HCM</div>
+                            <div>Đã dạy: 150 học viên</div>
+                            <div>Tỉ lệ cam kết: 100%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                            <img src="https://via.placeholder.com/30" alt="" class="teacher-avatar">
+                            <span class="main-heading">Mr. Lê Ngô Thành Đông</span>
+                        </a>
+                        </h4>
+                      </div>
+                      <div id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div>IELTS 7.5</div>
+                            <div>Social Sciences and Humanities Uni. HCM</div>
+                            <div>Đã dạy: 150 học viên</div>
+                            <div>Tỉ lệ cam kết: 100%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                            <img src="https://via.placeholder.com/30" alt="" class="teacher-avatar">
+                            <span class="main-heading">Mr. Nguyễn Hưng, BA</span>
+                        </a>
+                        </h4>
+                      </div>
+                      <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div>IELTS 7.5</div>
+                            <div>Social Sciences and Humanities Uni. HCM</div>
+                            <div>Đã dạy: 150 học viên</div>
+                            <div>Tỉ lệ cam kết: 100%</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+                <!-- User's learning progress -->
+                <div class="user-dashboard__progress col-lg-6 col-md-8">
+                    <!-- Practice plan -->
+                    <div class="skill-box">
+                        <div class="skill-heading flex-box flex-center-item flex-space-between">
+                            <div class="main-heading blue">Lớp 1-1</div>
+                        </div>
+                        <div class="skill-recent-activities">
+                            <div class="flex-box flex-center-item flex-space-between">
+                                <div class="mid-heading-light-small mrg-vertical-10">Exercises</div>
+                        <div class="flex-box vertical-flex">
+                            <div class="col-lg-12 col-md-12 col-sm-12 no-pdd-left mobile-pdd">
+                                <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-@Model.ExamInstanceId" data-role="instance" data-state="0" data-id="@Model.ExamInstanceId">
+                                    <div class="free-exercise-item-desc">
+                                        <span class="free-exercise-item-icon">@Html.Raw(faIcon)</span>
+                                        <span class="free-exercise-item-name js-text">@name</span>
+                                        <div class="free-exercise-item-name-full marquee js-text"><span class="marquee__content">@name</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+                        </div>
+                    </div>
+                    <!-- Practice plan -->
+                    <div class="skill-box js-guideline-practices-book">
+                        <div class="skill-heading flex-box flex-center-item flex-space-between">
+                            <div class="main-heading blue">Bài tập về nhà</div>
+                            <div class="waves-effect waves-light btn btn-blue js-next">
+                                Luyện tập
+                            </div>
+                        </div>
+
+                            <!-- Free practice excercises and tests - new design updated -->
+                                <div class="mid-heading-light mrg-vertical-10">Exercises</div>
+                                    <div class="flex-box vertical-flex">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 no-pdd-left mobile-pdd">
+                                    <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-306" data-role="instance" data-state="0" data-id="306">
+                                        <div class="free-exercise-item-desc">
+                                            <span class="free-exercise-item-icon"><i class="fas fa-book-open"></i></span>
+                                            <span class="free-exercise-item-name js-text" style="font-weight: bold;">Reading 19 Classfication</span>
+                                            <div class="free-exercise-item-name-full marquee js-text" style="width: 206px; font-weight: bold;"><span class="marquee__content" style="--wTranslate:206px;">Reading 19 Classfication</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-284" data-role="instance" data-state="0" data-id="284">
+                                        <div class="free-exercise-item-desc">
+                                            <span class="free-exercise-item-icon"><i class="fas fa-headphones-alt"></i></span>
+                                            <span class="free-exercise-item-name js-text">Listening 10 classification</span>
+                                            <div class="free-exercise-item-name-full marquee js-text" style="width: 201px;"><span class="marquee__content" style="--wTranslate:201px;">Listening 10 classification</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-1109" data-role="instance" data-state="0" data-id="1109">
+                                        <div class="free-exercise-item-desc">
+                                            <span class="free-exercise-item-icon"><i class="fas fa-pencil-alt"></i></span>
+                                            <span class="free-exercise-item-name js-text">Writing 53 Practice activity B </span>
+                                            <div class="free-exercise-item-name-full marquee js-text" style="width: 206px;"><span class="marquee__content" style="--wTranslate:206px;">Writing 53 Practice activity B </span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-314" data-role="instance" data-state="0" data-id="314">
+                                        <div class="free-exercise-item-desc">
+                                            <span class="free-exercise-item-icon"><i class="fas fa-book-open"></i></span>
+                                            <span class="free-exercise-item-name js-text">Reading 23 matching headings to sections </span>
+                                            <div class="free-exercise-item-name-full marquee js-text" style="width: 201px;"><span class="marquee__content" style="--wTranslate:201px;">Reading 23 matching headings to sections </span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-288" data-role="instance" data-state="0" data-id="288">
+                                        <div class="free-exercise-item-desc">
+                                            <span class="free-exercise-item-icon"><i class="fas fa-headphones-alt"></i></span>
+                                            <span class="free-exercise-item-name js-text">Listening 11 multiple selection</span>
+                                            <div class="free-exercise-item-name-full marquee js-text" style="width: 206px;"><span class="marquee__content" style="--wTranslate:206px;">Listening 11 multiple selection</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-301" data-role="instance" data-state="0" data-id="301">
+                                        <div class="free-exercise-item-desc">
+                                            <span class="free-exercise-item-icon"><i class="fas fa-book-open"></i></span>
+                                            <span class="free-exercise-item-name js-text">Reading 18 Multiple selection</span>
+                                            <div class="free-exercise-item-name-full marquee js-text" style="width: 201px;"><span class="marquee__content" style="--wTranslate:201px;">Reading 18 Multiple selection</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-294" data-role="instance" data-state="0" data-id="294">
+                                        <div class="free-exercise-item-desc">
+                                            <span class="free-exercise-item-icon"><i class="fas fa-headphones-alt"></i></span>
+                                            <span class="free-exercise-item-name js-text">Listening 13 table completion</span>
+                                            <div class="free-exercise-item-name-full marquee js-text" style="width: 206px;"><span class="marquee__content" style="--wTranslate:206px;">Listening 13 table completion</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-1101" data-role="instance" data-state="0" data-id="1101">
+                                        <div class="free-exercise-item-desc">
+                                            <span class="free-exercise-item-icon"><i class="fas fa-pencil-alt"></i></span>
+                                            <span class="free-exercise-item-name js-text">Writing 44 Relative clauses (2)</span>
+                                            <div class="free-exercise-item-name-full marquee js-text" style="width: 201px;"><span class="marquee__content" style="--wTranslate:201px;">Writing 44 Relative clauses (2)</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-295" data-role="instance" data-state="0" data-id="295">
+                                        <div class="free-exercise-item-desc">
+                                            <span class="free-exercise-item-icon"><i class="fas fa-headphones-alt"></i></span>
+                                            <span class="free-exercise-item-name js-text">Listening 14 Short Answers</span>
+                                            <div class="free-exercise-item-name-full marquee js-text" style="width: 206px;"><span class="marquee__content" style="--wTranslate:206px;">Listening 14 Short Answers</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-316" data-role="instance" data-state="0" data-id="316">
+                                        <div class="free-exercise-item-desc">
+                                            <span class="free-exercise-item-icon"><i class="fas fa-book-open"></i></span>
+                                            <span class="free-exercise-item-name js-text">Reading 25 Multiple selection</span>
+                                            <div class="free-exercise-item-name-full marquee js-text" style="width: 201px;"><span class="marquee__content" style="--wTranslate:201px;">Reading 25 Multiple selection</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-248" data-role="instance" data-state="0" data-id="248">
+                                        <div class="free-exercise-item-desc">
+                                            <span class="free-exercise-item-icon"><i class="fas fa-headphones-alt"></i></span>
+                                            <span class="free-exercise-item-name js-text">Listening 31 multiple selection</span>
+                                            <div class="free-exercise-item-name-full marquee js-text" style="width: 206px;"><span class="marquee__content" style="--wTranslate:206px;">Listening 31 multiple selection</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-249" data-role="instance" data-state="0" data-id="249">
+                                        <div class="free-exercise-item-desc">
+                                            <span class="free-exercise-item-icon"><i class="fas fa-headphones-alt"></i></span>
+                                            <span class="free-exercise-item-name js-text">Listening 32 multiple choice</span>
+                                            <div class="free-exercise-item-name-full marquee js-text" style="width: 201px;"><span class="marquee__content" style="--wTranslate:201px;">Listening 32 multiple choice</span></div>
+                                        </div>
+                                    </div>    
+                                </div>
+                                    </div>                        
+                                    <div class="mid-heading-light mrg-vertical-10">Practice tests</div>
+                                        <div class="box-shading js__selected-book-guideline js-course-type-53">
+
+                                    <div class="row practice-box no-mrg-left btn-1-book-view js-practice-item" data-id="1803">
+                                        <a href="/toeic-practice/collins-practice-tests-for-ielts-2" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 practice-box-img">
+                                            <img id="cover-book-skillFreePractice" class="img-responsive" src="https://media.ieltsgiasu.com/images/exams/Collins_Practice_Tests_for_IELTS_2.png" alt="Alternate Text">
+                                    <div class="skill-progress flex-box flex-center-item mrg-top-10 position-relative">
+                                        <div class="progress center background-47505D" data-progress-reflect="true">
+                                            <div class="progress-bar js-book-loadding-progress background-FEC840" role="progressbar" data-id="1803" aria-valuenow="0" aria-valuemax="1" style="width: 100%; max-width: 0%;">
+                                            </div>
+                                        </div>
+                                    </div>    </a>
+                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 practice-box-info no-pdd-horizon flex-box vertical-flex flex-space-between">
+                                            <div class="flex-box vertical-flex practice-box-test">
+                                                <div id="name-book-skillFreePractice" class="text-bold sub-heading">
+                                                    Collins Practice Tests For IELTS 2
+                                                    <br>
+                                                </div>
+                                                <div class="flex-box flex-wrap">
+
+                                        <div class="test-link mrg-right-5">
+                                            <div class="test-url test-active">Test 2</div>
+                                            <div class="js__exercises" hidden="">
+
+                                        <div class="flex-box flex-space-between mrg-vertical-10 js_changeicon">
+                                            <div class="flex-box">
+                                                <div class="fade-round mrg-right-10"><i class="fas fa-book-open skill-small-icon"></i></div>
+                                                <div class="flex-box vertical-flex mrg-right-10 practice-test-list">
+                                                    <div id="skill-name-skillFreePractice" class="mid-heading-light">Reading</div>
+                                                    <div id="partCount-Duration-skillFreePractice" class="test-duration"> 3 parts | 60 mins</div>
+                                                </div>
+                                            </div>      
+                                        </div>
+                                    
+                                            </div>
+                                        </div>
+                                    
+                                                </div>
+                                            </div>
+                                            <div class="flex-box flex-center-item practice-fb-transform">
+                                                <div class="fb-round mrg-right-10">
+                                                    <a onclick="window.open('https://www.facebook.com/share.php?u=https://starkcamp.com/toeic-practice/collins-practice-tests-for-ielts-2', '', 'width=500,height=500');"><i class="fab fa-facebook-f"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 test-list"><div class="js__exercises" hidden="" style="display: block;">
+
+                                        <div class="flex-box flex-space-between mrg-vertical-10 js_changeicon">
+                                            <div class="flex-box">
+                                                <div class="fade-round mrg-right-10"><i class="fas fa-book-open skill-small-icon"></i></div>
+                                                <div class="flex-box vertical-flex mrg-right-10 practice-test-list">
+                                                    <div id="skill-name-skillFreePractice" class="mid-heading-light">Reading</div>
+                                                    <div id="partCount-Duration-skillFreePractice" class="test-duration"> 3 parts | 60 mins</div>
+                                                </div>
+                                            </div>       
+                                        </div>
+                                    
+                                            </div></div>
+                                    </div>
+                                     </div>
+                                                                <div class="box-shading js__selected-book-guideline js-course-type-53" hidden="">
+
+                                    <div class="row practice-box no-mrg-left btn-1-book-view js-practice-item" data-id="0">
+                                        <a href="/toeic-practice/cambridge-12" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 practice-box-img">
+                                            <img id="cover-book-skillFreePractice" class="img-responsive" src="https://media.ieltsgiasu.com/images/exams/Cam 12.jpg" alt="Alternate Text">
+                                    <div class="skill-progress flex-box flex-center-item mrg-top-10 position-relative">
+                                        <div class="progress center background-47505D" data-progress-reflect="true">
+                                            <div class="progress-bar js-book-loadding-progress background-FEC840" role="progressbar" data-id="0" aria-valuenow="0" aria-valuemax="1" style="width: 100%; max-width: 0%;">
+                                            </div>
+                                        </div>
+                                    </div>    </a>
+                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 practice-box-info no-pdd-horizon flex-box vertical-flex flex-space-between">
+                                            <div class="flex-box vertical-flex practice-box-test">
+                                                <div id="name-book-skillFreePractice" class="text-bold sub-heading">
+                                                    Cambridge 12
+                                                    <br>
+                                                </div>
+                                                <div class="flex-box flex-wrap">
+
+                                        <div class="test-link mrg-right-5">
+                                            <div class="test-url test-active">Test 8</div>
+                                            <div class="js__exercises" hidden="">
+
+                                        <div class="flex-box flex-space-between mrg-vertical-10 js_changeicon">
+                                            <div class="flex-box">
+                                                <div class="fade-round mrg-right-10"><i class="fas fa-book-open skill-small-icon"></i></div>
+                                                <div class="flex-box vertical-flex mrg-right-10 practice-test-list">
+                                                    <div id="skill-name-skillFreePractice" class="mid-heading-light">Reading</div>
+                                                    <div id="partCount-Duration-skillFreePractice" class="test-duration"> 3 parts | 60 mins</div>
+                                                </div>
+                                            </div>        
+                                        </div>
+                                    
+                                            </div>
+                                        </div>
+                                    
+                                                </div>
+                                            </div>
+                                            <div class="flex-box flex-center-item practice-fb-transform">
+                                                <div class="fb-round mrg-right-10">
+                                                    <a onclick="window.open('https://www.facebook.com/share.php?u=https://starkcamp.com/toeic-practice/cambridge-12', '', 'width=500,height=500');"><i class="fab fa-facebook-f"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 test-list"><div class="js__exercises" hidden="" style="display: block;">
+
+                                        <div class="flex-box flex-space-between mrg-vertical-10 js_changeicon">
+                                            <div class="flex-box">
+                                                <div class="fade-round mrg-right-10"><i class="fas fa-book-open skill-small-icon"></i></div>
+                                                <div class="flex-box vertical-flex mrg-right-10 practice-test-list">
+                                                    <div id="skill-name-skillFreePractice" class="mid-heading-light">Reading</div>
+                                                    <div id="partCount-Duration-skillFreePractice" class="test-duration"> 3 parts | 60 mins</div>
+                                                </div>
+                                            </div>        
+                                        </div>
+                                    
+                                            </div></div>
+                                    </div>
+                                      </div>
+                                           <div class="box-shading js__selected-book-guideline js-course-type-53" hidden="">
+
+                                    <div class="row practice-box no-mrg-left btn-1-book-view js-practice-item" data-id="1854">
+                                        <a href="/toeic-practice/ielts-simulation-tests" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 practice-box-img">
+                                            <img id="cover-book-skillFreePractice" class="img-responsive" src="https://media.ieltsgiasu.com/images/exams/ielts simulation tests.jpg" alt="Alternate Text">
+                                    <div class="skill-progress flex-box flex-center-item mrg-top-10 position-relative">
+                                        <div class="progress center background-47505D" data-progress-reflect="true">
+                                            <div class="progress-bar js-book-loadding-progress background-FEC840" role="progressbar" data-id="1854" aria-valuenow="0" aria-valuemax="1" style="width: 100%; max-width: 0%;">
+                                            </div>
+                                        </div>
+                                    </div>    </a>
+                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 practice-box-info no-pdd-horizon flex-box vertical-flex flex-space-between">
+                                            <div class="flex-box vertical-flex practice-box-test">
+                                                <div id="name-book-skillFreePractice" class="text-bold sub-heading">
+                                                    IELTS Simulation Tests
+                                                    <br>
+                                                </div>
+                                                <div class="flex-box flex-wrap">
+
+                                        <div class="test-link mrg-right-5">
+                                            <div class="test-url test-active">Test 9</div>
+                                            <div class="js__exercises" hidden="">
+
+                                        <div class="flex-box flex-space-between mrg-vertical-10 js_changeicon">
+                                            <div class="flex-box">
+                                                <div class="fade-round mrg-right-10"><i class="fas fa-pencil-alt skill-small-icon"></i></div>
+                                                <div class="flex-box vertical-flex mrg-right-10 practice-test-list">
+                                                    <div id="skill-name-skillFreePractice" class="mid-heading-light">Writing</div>
+                                                    <div id="partCount-Duration-skillFreePractice" class="test-duration"> 2 parts | 60 mins</div>
+                                                </div>
+                                            </div>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                                    
+                                                </div>
+                                            </div>
+                                            <div class="flex-box flex-center-item practice-fb-transform">
+                                                <div class="fb-round mrg-right-10">
+                                                    <a onclick="window.open('https://www.facebook.com/share.php?u=https://starkcamp.com/toeic-practice/ielts-simulation-tests', '', 'width=500,height=500');"><i class="fab fa-facebook-f"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 test-list"><div class="js__exercises" hidden="" style="display: block;">
+
+                                        <div class="flex-box flex-space-between mrg-vertical-10 js_changeicon">
+                                            <div class="flex-box">
+                                                <div class="fade-round mrg-right-10"><i class="fas fa-pencil-alt skill-small-icon"></i></div>
+                                                <div class="flex-box vertical-flex mrg-right-10 practice-test-list">
+                                                    <div id="skill-name-skillFreePractice" class="mid-heading-light">Writing</div>
+                                                    <div id="partCount-Duration-skillFreePractice" class="test-duration"> 2 parts | 60 mins</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    
+                                            </div></div>
+                                    </div>
+                                                                </div>
+                                                                <div style="text-align: center">
+
+                                                                    <div class="cursor-pointer js-view-all-practice view-all-btn" data-course-type-id="53"><span class="view-text">View all</span><span><i class="fas fa-angle-double-down scroll-down-arrow"></i></span></div>
+
+                                                                    <div class="cursor-pointer js-hide-all-practice view-all-btn" data-course-type-id="53" hidden=""><span class="view-text">Hide all</span><span><i class="fas fa-angle-double-up scroll-down-arrow"></i></span></div>
+                                                                </div>
+                                                </div>
+ 
+                                            </div>
+                                            <!-- User's activities -->
+                                            <div class="user-dashboard__activities col-lg-3 col-md-12 skill-box">
+                                            
+                                                <!-- Book for you -->
+                                                <div id="BookForYou" class="skilbox-child" style="height: max-content;">
+
+
+                                                    <div class="main-heading pdd-top-25">Books for you</div>
+                                                    <div class="tab-pane" id="root-library">
+                                                        <ul id="bookLibraryForYou" class="row book-shelf">
+                                                                    <div class="book-container" style="width: 191.5px;">
+                                                    
+                                                                        
+                                                    
+                                                    <div class="media box-overlay">
+                                                        <div class="media-body text-center">
+                                                    
+                                                            <div class="book-frame ielts  listening reading writing speaking" id="B-1238" style="height: 231.5px;">
+                                                                <a class="changeurl" data-link="book/mcgraw-hill-education-6-ielts-practice-tests" data-toggle="modal" data-target="#show-book-info" onclick="show_book('1238');" style="cursor:pointer;">
+                                                                    <img class="img-fluid img-responsive" src="https://tutor.ieltsgiasu.com/images/exams/examinput-E5SeKih5HUW7SRlFyXiULg.png" width="300" style="height: 191.5px;">
+                                                                </a>
+                                                                <div class="book-name-CS hidden">McGraw Hill Education 6 IELTS Practice Tests</div>
+                                                                <div class="book-name hidden">mcgraw hill education 6 ielts practice tests</div>
+                                                                <div class="book-info">
+                                                                    <label class="view-count">
+                                                                        <i class="fa fa-eye" aria-hidden="true"></i> <span>132</span>
+                                                                    </label>
+                                                                    <label class="download-count">
+                                                                        <i class="fa fa-download" aria-hidden="true"></i> <span>26</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="book-details">
+                                                                    <div class="book-action">
+                                                                                <button class="book-download ga-book-download" onclick="window.open('https://drive.google.com/open?id=18nikofPfCEUayUGxbcgqHPBQNjwSOFI9', '_blank');" data-book-name="mcgraw hill education 6 ielts practice tests" data-category="ielts book" data-value="1238">Download</button>                            
+                                                                        
+                                                                        <button class="ga-book-share" data-book-name="mcgraw hill education 6 ielts practice tests" data-category="ielts book" onclick="window.open('https://www.facebook.com/share.php?u=https://starkcamp.com/book/mcgraw-hill-education-6-ielts-practice-tests', '', 'width=500,height=500');">Share</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                                    </div>
+                                                                    <div class="book-container" style="width: 191.5px;">
+                                                    
+                                                                        
+                                                    
+                                                    <div class="media box-overlay">
+                                                        <div class="media-body text-center">
+                                                    
+                                                            <div class="book-frame ielts  listening reading writing speaking" id="B-1209" style="height: 231.5px;">
+                                                                <a class="changeurl" data-link="book/cambridge-ielts-9-students-book-with-answers" data-toggle="modal" data-target="#show-book-info" onclick="show_book('1209');" style="cursor:pointer;">
+                                                                    <img class="img-fluid img-responsive" src="https://tutor.ieltsgiasu.com/images/exams/examinput-DgV5dqf2bUS5jjWZeDiexQ.png" width="300" style="height: 191.5px;">
+                                                                </a>
+                                                                <div class="book-name-CS hidden">Cambridge IELTS 9 Student's Book with Answers</div>
+                                                                <div class="book-name hidden">cambridge ielts 9 student's book with answers</div>
+                                                                <div class="book-info">
+                                                                    <label class="view-count">
+                                                                        <i class="fa fa-eye" aria-hidden="true"></i> <span>137</span>
+                                                                    </label>
+                                                                    <label class="download-count">
+                                                                        <i class="fa fa-download" aria-hidden="true"></i> <span>60</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="book-details">
+                                                                    <div class="book-action">
+                                                                                <button class="book-download ga-book-download" onclick="window.open('https://alteduvn-my.sharepoint.com/:u:/g/personal/van_phan_alt_edu_vn/EbByY-KFN_FPqKPDgQZBACsBAMWKhCIeoO2JFKqhzes8sQ?e=vqsh6b', '_blank');" data-book-name="cambridge ielts 9 student's book with answers" data-category="ielts book" data-value="1209">Download</button>                            
+                                                                        
+                                                                        <button class="ga-book-share" data-book-name="cambridge ielts 9 student's book with answers" data-category="ielts book" onclick="window.open('https://www.facebook.com/share.php?u=https://starkcamp.com/book/cambridge-ielts-9-students-book-with-answers', '', 'width=500,height=500');">Share</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                                    </div>
+                                                                    <div class="book-container" style="width: 191.5px;">
+                                                    
+                                                                        
+                                                    
+                                                    <div class="media box-overlay">
+                                                        <div class="media-body text-center">
+                                                    
+                                                            <div class="book-frame toeic  " id="B-1979" style="height: 231.5px;">
+                                                                <a class="changeurl" data-link="toeic-book/toeic-analyst-second-edition" data-toggle="modal" data-target="#show-book-info" onclick="show_book('1979');" style="cursor:pointer;">
+                                                                    <img class="img-fluid img-responsive" src="https://tutor.ieltsgiasu.com/images/exams/tai.nguyen-BwbJd3PSZEebGcAFWpqkA.jpg" width="300" style="height: 191.5px;">
+                                                                </a>
+                                                                <div class="book-name-CS hidden">Toeic Analyst - Second Edition</div>
+                                                                <div class="book-name hidden">toeic analyst - second edition</div>
+                                                                <div class="book-info">
+                                                                    <label class="view-count">
+                                                                        <i class="fa fa-eye" aria-hidden="true"></i> <span>110</span>
+                                                                    </label>
+                                                                    <label class="download-count">
+                                                                        <i class="fa fa-download" aria-hidden="true"></i> <span>4</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="book-details">
+                                                                    <div class="book-action">
+                                                                                <button class="book-download ga-book-download" onclick="window.open('https://drive.google.com/file/d/1lRev8AAzv23Izjc_SKwn4pNKw5lKmrmP/view?usp=sharing', '_blank');" data-book-name="toeic analyst - second edition" data-category="toeic book" data-value="1979">Download</button>                            
+                                                                        
+                                                                        <button class="ga-book-share" data-book-name="toeic analyst - second edition" data-category="toeic book" onclick="window.open('https://www.facebook.com/share.php?u=https://starkcamp.com/book/toeic-analyst-second-edition', '', 'width=500,height=500');">Share</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                                    </div>
+                                                                    <div class="book-container" style="width: 191.5px;">
+                                                    
+                                                                        
+                                                    
+                                                    <div class="media box-overlay">
+                                                        <div class="media-body text-center">
+                                                    
+                                                            <div class="book-frame toeic  reading" id="B-1987" style="height: 231.5px;">
+                                                                <a class="changeurl" data-link="toeic-book/toeic-economy-rc-1000-vol-3" data-toggle="modal" data-target="#show-book-info" onclick="show_book('1987');" style="cursor:pointer;">
+                                                                    <img class="img-fluid img-responsive" src="https://tutor.ieltsgiasu.com/images/exams/examinput-uU0QYsGfrEKn4nmq3HLHw.jpg" width="300" style="height: 191.5px;">
+                                                                </a>
+                                                                <div class="book-name-CS hidden">TOEIC Economy RC 1000 - vol 3</div>
+                                                                <div class="book-name hidden">toeic economy rc 1000 - vol 3</div>
+                                                                <div class="book-info">
+                                                                    <label class="view-count">
+                                                                        <i class="fa fa-eye" aria-hidden="true"></i> <span>133</span>
+                                                                    </label>
+                                                                    <label class="download-count">
+                                                                        <i class="fa fa-download" aria-hidden="true"></i> <span>4</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="book-details">
+                                                                    <div class="book-action">
+                                                                                <button class="book-download ga-book-download" onclick="window.open('https://drive.google.com/file/d/13Lq2ZbV8qSWqIaoTdLjqFDJ6Pf7zmO-R/view?usp=sharing', '_blank');" data-book-name="toeic economy rc 1000 - vol 3" data-category="toeic book" data-value="1987">Download</button>                            
+                                                                        
+                                                                        <button class="ga-book-share" data-book-name="toeic economy rc 1000 - vol 3" data-category="toeic book" onclick="window.open('https://www.facebook.com/share.php?u=https://starkcamp.com/book/toeic-economy-rc-1000-vol-3', '', 'width=500,height=500');">Share</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                                    </div>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal modal-bookLibraryForYou" tabindex="-1" role="dialog" id="show-book-info">
+                                                        <div class="modal-dialog fadeOutDown" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">×</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="modal-loader">
+                                                                        <div class="spinner"></div>
+                                                                    </div>
+                                                                    <div class="book-header">
+                                                                        <div class="book-cover">
+                                                                            <img>
+                                                                            <span class="label-premium label-premium-new">Premium</span>
+                                                                        </div>
+                                                                        <div class="book-infomation">
+                                                                            <p class="book-name"></p>
+                                                                            <p class="book-more-info opa-05">Publisher: <span class="book-publisher"></span></p>
+                                                                            
+                                                                            <div class="book-action">
+                                                                                    <button class="btn-download"> Download</button>
+                                                    
+                                                                                <button class="btn-practice"> Share</button>
+                                                    
+                                                                                    <p class="unzip-password opa-05">Password: ieltsgiasu.com</p>
+                                                                            </div>
+                                                                            <div class="book-stats opa-05">
+                                                                                <i class="fa fa-eye" aria-hidden="true"></i> <span class="view-total"></span>
+                                                                                <i class="fa fa-download" aria-hidden="true"></i> <span class="down-total"></span>
+                                                                                <span class="book-tags">
+                                                                                    <i class="fa fa-tag" aria-hidden="true"></i>
+                                                                                    <span class="tag-names"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="book-desc">
+                                                                        <label>Book Description</label>
+                                                                        <p class="book-desc-p"></p>
+                                                                        <hr>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <script>
+                                                        var lib_path = location.pathname;
+                                                        var lib_url = location.origin + '/library';
+                                                    
+                                                        $('#show-book-info.modal-bookLibraryForYou').on('show.bs.modal', function (e) {
+                                                            $('#show-book-info.modal .modal-dialog').attr('class', 'modal-dialog fadeInUp animated');
+                                                            spinOn();
+                                                        })
+                                                        $('#show-book-info.modal-bookLibraryForYou').on('hide.bs.modal', function (e) {
+                                                            $('#show-book-info.modal .modal-dialog').attr('class', 'modal-dialog fadeOutDown animated');
+                                                            History.pushState(null, "Practice IELTS and TOEIC - Completely Free", `/${lib_path}`);
+                                                        })
+                                                    
+                                                        $("#bookLibraryForYou .changeurl img, #bookLibraryForYou .changeurl .label-premium").on('click', function (e) {
+                                                            let temp = $(e.target).parents('a').attr("data-link");
+                                                            History.pushState(null, "Practice IELTS and TOEIC - Completely Free", temp);
+                                                        });
+                                                    </script></div>
+                          </div>
+                             
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
       <!-- jQuery -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <!-- Bootstrap JavaScript -->
@@ -36,6 +631,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="extras/nouislider.js"></script>
       <script src="extras/wNumb.js"></script>
+      <script src="dashboard/marquee.js"></script>
       <script src="consultancy.js"></script>
       <script>
         $(document).ready(function () {

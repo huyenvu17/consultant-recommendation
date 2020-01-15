@@ -5,6 +5,7 @@
   --alt-common-black: #180D0E;
   --alt-text-dark-blue: #1F3A55;
   --alt-common-white: #fff;
+  --alt-blue: #589FEF;
 }
 /*#region input properties*/
 /* label color */
@@ -132,6 +133,12 @@ label.zero-left {
 .result-links {
   margin: 20% auto;
 }
+.btn-blue, .btn-blue:hover, .btn-blue:focus {
+  background-color: var(--alt-blue);
+  color: var(--alt-common-white);
+  font-weight: bold;
+  text-transform: none;
+}
 /*#endregion*/
 
 /*#region general*/
@@ -196,7 +203,6 @@ label.zero-left {
 }
 .consultancy .consultancy__content .steps-panel li {
     padding: 0;
-    /* text-align: center; */
 }
 
 .consultancy .consultancy__content .steps-panel li.active::after{

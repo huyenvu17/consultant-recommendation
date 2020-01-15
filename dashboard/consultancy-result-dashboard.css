@@ -1,0 +1,1926 @@
+/**
+    ==== ALT Community Project ====
+            User Dashboard
+        created day: 11/09/2019
+
+    Table of contents
+    1. General
+    2. User Information
+    3. Learning Progress
+    4. User activities
+    5. Consultant Result 
+    6. Responsive
+*/
+
+/*#region 1. General*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap&subset=vietnamese');
+
+.user-dashboard {
+    font-family: 'Montserrat', sans-serif;
+    background: #F8F8F8;
+    color: #47515E;
+    font-size: 16px;
+}
+
+.user-dashboard-data {
+    margin: 3% auto;
+}
+
+.leaderboard-content .sub-heading {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.small-heading {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.small-label {
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+.common-text {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.user-dashboard__information, .user-dashboard__activities {
+    margin: 15px auto;
+}
+
+.btn-rectangle-blue {
+    background: #589FEF;
+    border-radius: 6px;
+    padding: 7px 10px;
+    color: #fff;
+    font-size: 12px;
+}
+
+    .btn-rectangle-blue:hover, .btn-rectangle-blue:active, .btn-rectangle-blue:focus {
+        color: #fff;
+        background: #4f91dc;
+    }
+
+.btn-rectangle-blue-light:hover, .btn-rectangle-blue-light:active, .btn-rectangle-blue-light:focus {
+    background: #589FEF;
+    color: #fff;
+}
+
+.btn-rectangle-blue-light {
+    background: #3594ff;
+    border-radius: 6px;
+    padding: 7px 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-dark-square {
+    background: #47515E;
+    color: #fff;
+    padding: 6px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+    .btn-dark-square:hover, .btn-dark-square:focus, .btn-dark-square:active {
+        background: #535c67;
+        color: #fff;
+    }
+
+.fade-round {
+    background: #eaeaea;
+    padding: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size:12px;
+    display: flex !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.btn-blue-square {
+    border: 1px solid #589FEF;
+    border-radius: 6px;
+    height: 30px;
+    padding: 5px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(to right, white 50%, #589FEF 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.3s ease;
+}
+
+    .btn-blue-square:hover {
+        background-position: left bottom;
+        color: #589FEF;
+    }
+.page-content-icon img {
+    width: 65px;
+}
+.no-pdd-left {
+    padding-left: 0px!important;
+}
+.flex-space-between {
+    justify-content: space-between !important;
+    -webkit-justify-content: space-between !important;
+}
+.vertical-flex {
+    flex-direction: column!important;
+    -webkit-flex-direction: column!important;
+}
+.mrg-vertical-10 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+.mrg-right-10 {
+    margin-right: 10px !important;
+}
+.pdd-top-25 {
+    padding-top: 25px!important;
+}
+.pdd-btm-20 {
+    padding-bottom: 20px !important;
+}
+/*#endregion*/
+
+/*#region 2. User Information*/
+.leaderboard-overal {
+    background: #fff;
+    padding: 15px 0px;
+    border-radius: 3px;
+    font-size:12px;
+}
+
+.leaderboard-item {
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #000;
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+}
+
+    .leaderboard-item:not(.lb-none):hover {
+        /*color: #589FEF;*/
+    }
+
+    .leaderboard-item .hidden-data {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: -10px;
+        z-index: 10;
+    }
+
+.leaderboard-overal .leaderboard-item {
+    position: relative;
+}
+
+    .leaderboard-overal .leaderboard-item img {
+        transition: all 0.2s ease-in-out
+    }
+
+    .leaderboard-overal .leaderboard-item:hover .user-name-in-short {
+       text-decoration: underline;
+    }
+
+.leaderboard-overal > .leaderboard-item:hover {
+    height: 41px;
+}
+
+.leaderboard-tab .leaderboard-item:not(.lb-none):hover .ranking-position {
+    display: block;
+}
+
+.leaderboard-item:hover img {
+    transform: scale(1.4);
+}
+
+.leaderboard-item:not(.lb-none):hover .hidden-data {
+    display: block;
+}
+
+    .leaderboard-item:not(.lb-none):hover .hidden-data .badge {
+        position: absolute;
+        right: -20px;
+        margin-top: -40px;
+        z-index: 1234;
+        filter: drop-shadow(2px 2px 4px #543);
+    }
+
+.leaderboard-tab .tab-content .tab-pane .tab-pane-bottom {
+    position: absolute;
+    bottom: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.leaderboard-item .hidden-data .user-rank {
+    width: 100%;
+    height: 100%;
+    font-size: xx-large;
+    font-size: -webkit-xxx-large;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leaderboard-item .hidden-data .user-name-full {
+    white-space: nowrap;
+    width: calc(100vw / 6.5);
+    height: 41px;
+    font-weight: 400;
+    transition: font-weight 0.2s ease-in-out;
+    user-select: none;
+}
+
+.leaderboard-item:not(.lb-none):hover .hidden-data .user-name-full {
+    font-weight: 600;
+}
+
+.leaderboard-item .hidden-data .user-points {
+    position: absolute;
+    border-radius: 4px;
+    padding: 5px;
+    z-index: -11;
+    color: #fff;
+    /*bottom: -22px;*/
+    right: 0px;
+    /*left: 0px;*/
+    height: 30px;
+    font-size: medium;
+    box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.27);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.47);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    font-weight: 500;
+    user-select: none;
+}
+
+    .leaderboard-item .hidden-data .user-points.pt-yellow {
+        background: linear-gradient(to bottom right, #ffeb3b 0%, #ffb300 100%);
+    }
+
+    .leaderboard-item .hidden-data .user-points.pt-silver {
+        background: linear-gradient(to bottom right, #676060 0%, #dcd8d8 100%);
+    }
+
+    .leaderboard-item .hidden-data .user-points.pt-orange {
+        background: linear-gradient(to bottom right, #f9c959 0%, #f57c00 100%);
+    }
+.members-statistics {
+    font-size:14px;
+}
+.marquee {
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee__content {
+    /*padding: 5px 0;*/
+    margin-right: 100px;
+    position: absolute;
+    height: 100%;
+    animation: scroller 3s linear infinite;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: -2;
+}
+
+@keyframes scroller {
+    0% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(calc(-100% + calc(100vw / 6.5)));
+    }
+
+    100% {
+        transform: translateX(calc(-100% + calc(100vw / 6.5)));
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .leaderboard-item .hidden-data .user-name-full {
+        white-space: nowrap;
+        width: calc(100vw / 1.75);
+        height: 41px;
+        font-weight: 400;
+        transition: font-weight 0.2s ease-in-out;
+        user-select: none;
+    }
+
+    @keyframes scroller {
+        0% {
+            transform: translateX(0%);
+        }
+
+        25% {
+            transform: translateX(0%);
+        }
+
+        50% {
+            transform: translateX(calc(-100% + calc(100vw / 1.75)));
+        }
+
+        100% {
+            transform: translateX(calc(-100% + calc(100vw / 1.75)));
+        }
+    }
+}
+
+.leaderboard-overal .leaderboard-item:not(.lb-none) .badge {
+    position: relative;
+    /*margin: 1.5em 3em;*/
+    width: 4em;
+    height: 6.2em;
+    border-radius: 10px;
+    display: inline-block;
+    top: 0;
+    transition: all 0.2s ease;
+}
+
+    .leaderboard-overal .leaderboard-item:not(.lb-none) .badge:before,
+    .leaderboard-overal .leaderboard-item:not(.lb-none) .badge:after {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        background: inherit;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .leaderboard-overal .leaderboard-item:not(.lb-none) .badge:before {
+        transform: rotate(60deg);
+    }
+
+    .leaderboard-overal .leaderboard-item:not(.lb-none) .badge:after {
+        transform: rotate(-60deg);
+    }
+
+    .leaderboard-overal .leaderboard-item:not(.lb-none) .badge:hover {
+        top: -4px;
+    }
+
+    .leaderboard-overal .leaderboard-item:not(.lb-none) .badge .circle {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background: #fff;
+        z-index: 10;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+        .leaderboard-overal .leaderboard-item:not(.lb-none) .badge .circle i.fa {
+            font-size: 2em;
+            margin-top: 8px;
+        }
+
+    .leaderboard-overal .leaderboard-item:not(.lb-none) .badge .font {
+        display: inline-block;
+        margin-top: 1em;
+    }
+
+.yellow {
+    background: linear-gradient(to bottom right, #ffeb3b 0%, #fbc02d 100%);
+    color: #ffb300;
+    transform: scale(0.67);
+}
+
+.orange {
+    background: linear-gradient(to bottom right, #ffc107 0%, #f57c00 100%);
+    color: #f68401;
+    transform: scale(0.6);
+}
+
+.silver {
+    background: linear-gradient(to bottom right, #E0E0E0 0%, #BDBDBD 100%);
+    color: #9e9e9e;
+    transform: scale(0.63);
+}
+
+.ranking-position {
+    width: 35px;
+    text-align: right;
+}
+
+.leaderboard-item-myrank {
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #000;
+    background: #47515E;
+    color: #fff;
+}
+
+.user-total-points {
+    text-align: end;
+    max-width: 5ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 5ch;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* The ribbon */
+.ribbon {
+    width: 100px;
+    height: 150px;
+    background-color: gold;
+    position: absolute;
+    right: -45px;
+    margin-top: -40px;
+    z-index: -1;
+    filter: drop-shadow(2px 2px 4px #543);
+}
+
+    .ribbon:before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: -49px;
+    }
+
+    .ribbon.rb-yellow {
+        background-color: #ffb300;
+        transform: scale(0.37);
+    }
+
+        .ribbon.rb-yellow:before {
+            border-left: 50px solid #ffb300;
+            border-right: 50px solid #ffb300;
+            border-bottom: 50px solid transparent;
+        }
+
+    .ribbon.rb-silver {
+        background-color: #9e9e9e;
+        transform: scale(0.33);
+    }
+
+        .ribbon.rb-silver:before {
+            border-left: 50px solid #9e9e9e;
+            border-right: 50px solid #9e9e9e;
+            border-bottom: 50px solid transparent;
+        }
+
+    .ribbon.rb-orange {
+        background-color: #f68401;
+        transform: scale(0.3);
+    }
+
+        .ribbon.rb-orange:before {
+            border-left: 50px solid #f68401;
+            border-right: 50px solid #f68401;
+            border-bottom: 50px solid transparent;
+        }
+
+.leaderboard-item .user-name {
+    width: -webkit-fill-available;
+}
+
+.user-name-in-short {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+}
+
+.full-total-points {
+    display: none;
+    background: #F8F8F8;
+    top: -20%;
+    position: absolute;
+    border-radius: 3px;
+    z-index: 100;
+    -wekit-box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.12);
+    transition: 0.3s all ease;
+}
+
+.user-point:hover .full-total-points {
+    display: block;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+#LeaderboardPopup
+{
+    -webkit-overflow-scrolling: auto;
+}
+
+#LeaderboardPopup .modal-content {
+    padding: 3% 3% 12% 3%;
+}
+
+#LeaderboardPopup .modal-header {
+    padding: 5px 15px;
+    border-bottom: none;
+}
+
+    #LeaderboardPopup .modal-header .close {
+        font-size: 30px;
+    }
+
+#LeaderboardPopup .modal-body {
+    padding: 0px 15px;
+}
+
+    #LeaderboardPopup .modal-body .leaderboard-tab ul li.active {
+        background: #47515E;
+    }
+
+    #LeaderboardPopup .modal-body .leaderboard-tab .nav-tabs > li.active > a, #LeaderboardPopup .modal-body .leaderboard-tab .nav-tabs > li.active > a:hover, #LeaderboardPopup .modal-body .leaderboard-tab .nav-tabs > li.active > a:focus {
+        color: #fff;
+        cursor: default;
+        background-color: transparent;
+        border: none;
+    }
+
+@media screen and (max-width: 1440px) {
+    .leaderboard-tab .item-popup .item-info {
+        width: calc(100% - 80px);
+    }
+}
+
+.leaderboard-tab .leaderboard-item{
+    padding: 8px 15px 8px 0;
+}
+
+.leaderboard-tab .tab-pane .leaderboard-item-myrank {
+    padding: 0px 15px 0px 0 !important
+}
+
+    .leaderboard-tab .leaderboard-item:hover {
+        color: #589FEF;
+        background: #ffffff;
+        border-radius: unset;
+    }
+
+    .leaderboard-tab .leaderboard-item:hover img {
+        transform: none;
+    }
+
+.leaderboard-tab .nav-tabs .nav > li > a:hover {
+    border: none !important;
+    border-color: none;
+}
+
+.leaderboard-tab .tab-pane {
+    height: 660px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+    .leaderboard-tab .tab-pane .leaderboard-item-myrank {
+        position: sticky;
+        position: -webkit-sticky;
+        bottom: 0;
+        padding: 0 15px;
+    }
+
+.user-name-popup {
+    width: 280px;
+    text-align: left;
+}
+
+.user-dashboard__information .teacher-list .panel .panel-heading {
+    background-color: #fff;
+}
+.user-dashboard__information .teacher-list .panel .panel-collapse .panel-body {
+    border-top: none;
+    padding-left: 12%;
+}
+
+/*#endregion*/
+
+/*#region 3. Learning Progress*/
+.user-dashboard__progress .skill-progress .progress {
+    width: 100%;
+    text-align: left;
+    margin: auto 0;
+    height: 7px;
+}
+
+    .user-dashboard__progress .skill-progress .progress .sr-only {
+        border: 0;
+        clip: inherit;
+        height: auto;
+        margin: auto;
+        overflow: auto !important;
+        padding: 0;
+        position: inherit;
+        width: auto !important;
+        right: auto !important;
+        color: #be1c2f;
+    }
+
+.user-dashboard__progress .skill-box, .user-dashboard__information .skill-box {
+    margin: 15px auto;
+    padding: 4%;
+    background: #fff;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.01);
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.01);
+}
+.skilbox-child {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    border-radius: 3px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.01);
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.01);
+}
+
+.user-dashboard__progress .skill-progress .progress-summary {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+/*.fb-round .fa-facebook-f {
+    background: #3b5998;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 5px;
+}*/
+.fb-round .fa-facebook-f {
+    background: #3b5998;
+    color: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 7px;
+    margin-bottom:5px;
+}
+.user-dashboard__progress .skill-box .skill-review {
+    background: #F8F8F8;
+    padding: 2%;
+    position: absolute;
+    top: 34px;
+    border-radius: 3px;
+    right: -6%;
+    z-index: 100;
+    -wekit-box-shadow: -1px 2px 9px 3px rgba(0, 0, 0, 0.23);
+    box-shadow: -1px 2px 9px 3px rgba(0, 0, 0, 0.23);
+}
+
+.skill-review::before {
+    margin-left: -9px;
+    bottom: 98%;
+    left: 60%;
+    content: " ";
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    pointer-events: none;
+    border-width: 9px;
+    border-style: solid;
+    border-color: transparent transparent rgb(255, 255, 255);
+    border-image: initial;
+    border-bottom: 9px solid rgb(255, 255, 255);
+}
+
+.user-dashboard__progress .skill-box .skill-heading {
+    position: relative;
+    justify-content: space-between;
+    -webkit-justify-content:space-between;
+}
+
+.overlay-skill-box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    opacity: 0.7;
+    transition: .5s ease;
+    background-color: #000000;
+    z-index: 5;
+    color: #fff;
+    text-align: center;
+}
+
+.practice-box .practice-box-img {
+    padding-left: 0;
+    max-width: 150px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.practice-box .practice-box-info {
+    border-right: 2px solid #47515E;
+}
+
+.user-dashboard__progress .btn-dark-square {
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+.check-circle-green {
+    color: #319231;
+    font-size: 12px;
+}
+
+.user-dashboard__progress .skill-progress .progress-summary .tooltip, .statistics-group .skill-box .flex-inline .tooltip {
+    width: 100px;
+}
+
+.user-dashboard__progress .skill-progress .progress-summary .tooltip-inner, .statistics-group .skill-box .flex-inline .tooltip-inner {
+    background: #313841;
+    min-width: 100px;
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+.user-dashboard__progress .skill-progress .progress-summary .tooltip.bottom .tooltip-arrow, .statistics-group .skill-box .flex-inline .tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #313841;
+}
+
+.btn-white-square {
+    padding: 1px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.practice-test-list {
+    width: auto;
+}
+
+.your-guideline .modal-content {
+    background: #F8F8F8;
+}
+
+.your-guideline .row {
+    background: white;
+    border-radius: 5px;
+}
+
+.your-guideline .modal-header {
+    padding-left: 60px;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.your-guideline .modal-body {
+    padding: 2vh 4vw 15vh 4vw;
+}
+
+.your-guideline .flex-inline {
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+    .your-guideline .flex-inline i {
+        padding-top: 3px;
+    }
+
+.text-underline {
+    text-decoration: underline;
+    color: #656565;
+}
+
+#tabExercises .statistics-group .skill-box {
+    padding-bottom: 1px;
+}
+.number-of-total-users, .number-of-active-users {
+    font-size: 11px;
+}
+.test-url {
+    font-size: 12px;
+    margin-top: 4px;
+}
+.test-duration {
+    font-size:10px;
+}
+.practice-fb-transform {
+    margin-bottom:5%;
+    font-size:12px;
+}
+/*#region Target Completed*/
+.target-completed-box {
+    background: #FFC428;
+    padding: 3% 4% 6%;
+    border-radius: 3px;
+    margin: auto;
+}
+.target-completed-tag {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    opacity: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.target-completed-tag {
+    margin: auto;
+}
+.tag-animation {
+    animation: animationFrames linear 1s;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+    -webkit-animation: animationFrames linear 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-transform-origin: 50% 50%;
+    -moz-animation: animationFrames linear 1s;
+    -moz-animation-iteration-count: 1;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: animationFrames linear 1s;
+    -o-animation-iteration-count: 1;
+    -o-transform-origin: 50% 50%;
+    -ms-animation: animationFrames linear 1s;
+    -ms-animation-iteration-count: 1;
+    -ms-transform-origin: 50% 50%;
+}
+@keyframes animationFrames {
+    0% {
+        transform: rotate(0deg) scaleX(1.00) scaleY(1.00);
+    }
+
+    10% {
+        transform: rotate(-3deg) scaleX(0.80) scaleY(0.80);
+    }
+
+    20% {
+        transform: rotate(-3deg) scaleX(0.80) scaleY(0.80);
+    }
+
+    30% {
+        transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    40% {
+        transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    50% {
+        transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    60% {
+        transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    70% {
+        transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    80% {
+        transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    90% {
+        transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    100% {
+        transform: rotate(0deg) scaleX(1.20) scaleY(1.20);
+    }
+}
+
+@-moz-keyframes animationFrames {
+    0% {
+        -moz-transform: rotate(0deg) scaleX(1.00) scaleY(1.00);
+    }
+
+    10% {
+        -moz-transform: rotate(-3deg) scaleX(0.80) scaleY(0.80);
+    }
+
+    20% {
+        -moz-transform: rotate(-3deg) scaleX(0.80) scaleY(0.80);
+    }
+
+    30% {
+        -moz-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    40% {
+        -moz-transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    50% {
+        -moz-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    60% {
+        -moz-transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    70% {
+        -moz-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    80% {
+        -moz-transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    90% {
+        -moz-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    100% {
+        -moz-transform: rotate(0deg) scaleX(1.20) scaleY(1.20);
+    }
+}
+
+@-webkit-keyframes animationFrames {
+    0% {
+        -webkit-transform: rotate(0deg) scaleX(1.00) scaleY(1.00);
+    }
+
+    10% {
+        -webkit-transform: rotate(-3deg) scaleX(0.80) scaleY(0.80);
+    }
+
+    20% {
+        -webkit-transform: rotate(-3deg) scaleX(0.80) scaleY(0.80);
+    }
+
+    30% {
+        -webkit-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    40% {
+        -webkit-transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    50% {
+        -webkit-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    60% {
+        -webkit-transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    70% {
+        -webkit-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    80% {
+        -webkit-transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    90% {
+        -webkit-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg) scaleX(1.20) scaleY(1.20);
+    }
+}
+
+@-o-keyframes animationFrames {
+    0% {
+        -o-transform: rotate(0deg) scaleX(1.00) scaleY(1.00);
+    }
+
+    10% {
+        -o-transform: rotate(-3deg) scaleX(0.80) scaleY(0.80);
+    }
+
+    20% {
+        -o-transform: rotate(-3deg) scaleX(0.80) scaleY(0.80);
+    }
+
+    30% {
+        -o-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    40% {
+        -o-transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    50% {
+        -o-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    60% {
+        -o-transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    70% {
+        -o-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    80% {
+        -o-transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    90% {
+        -o-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    100% {
+        -o-transform: rotate(0deg) scaleX(1.20) scaleY(1.20);
+    }
+}
+
+@-ms-keyframes animationFrames {
+    0% {
+        -ms-transform: rotate(0deg) scaleX(1.00) scaleY(1.00);
+    }
+
+    10% {
+        -ms-transform: rotate(-3deg) scaleX(0.80) scaleY(0.80);
+    }
+
+    20% {
+        -ms-transform: rotate(-3deg) scaleX(0.80) scaleY(0.80);
+    }
+
+    30% {
+        -ms-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    40% {
+        -ms-transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    50% {
+        -ms-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    60% {
+        -ms-transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    70% {
+        -ms-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    80% {
+        -ms-transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    90% {
+        -ms-transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+    }
+
+    100% {
+        -ms-transform: rotate(0deg) scaleX(1.20) scaleY(1.20);
+    }
+}
+
+.reset-guideline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    background: #F9B928;
+    color:#fff;
+    font-weight:600;
+    border-radius: 0px 0px 0px 3px;
+    border-right: 1px solid #fff;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.change-target {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    color: #fff;
+    font-weight: 600;
+    background: #E59E2C;
+    border-radius: 0px 0px 3px 0px;
+    border-right: 1px solid #fff;
+    cursor: pointer;
+    transition: .3s ease;
+}
+/*#endregion*/
+
+
+.view-all-btn {
+    width: 100px;
+    margin: -2% auto;
+    text-align: center;
+    height: 0;
+    position: relative;
+    border-right: 40px solid transparent;
+    border-top: 30px solid #fff;
+    border-left: 40px solid transparent;
+    box-sizing: content-box;
+    filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.24));
+    transition: 0.2s all ease;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+    .view-all-btn .view-text {
+        position: absolute;
+        top: -25px;
+        left: 15%;
+        color: #589fef;
+    }
+    .view-all-btn:hover {
+        -ms-transform: translateY(1px);
+        -webkit-transform: translateY(1px); 
+        transform: translateY(1px);
+    }
+.scroll-down-arrow {
+    -moz-animation: bounce-down 3s infinite;
+    -webkit-animation: bounce-down 3s infinite;
+    animation: bounce-down 3s infinite;
+    position: absolute;
+    top: -22px;
+    right: 15px;
+    color: #589fef;
+}
+
+@-moz-keyframes bounce-down {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+
+    60% {
+        -moz-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+}
+
+@-webkit-keyframes bounce-down {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+}
+
+@keyframes bounce-down {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+
+    60% {
+        -moz-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+}
+/*#endregion*/
+/*#region 4. User activities*/
+.user-dashboard__activities {
+    /*background: #fff;
+    border-radius: 3px;*/
+}
+
+    .user-dashboard__activities .followers, .user-dashboard__activities .recent-activities {
+        margin: 0 auto 15px;
+    }
+
+    .user-dashboard__activities .carousel-inner-blog {
+        display: flex;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex !important;
+        justify-content: center;
+        -webkit-justify-content: center;
+    }
+
+    .user-dashboard__activities .other-courses {
+        background: #fff;
+        border-radius: 3px;
+        padding: 1vw;
+        -webkit-box-shadow: -1px 2px 9px 3px rgba(0, 0, 0, 0.04);
+        box-shadow: -1px 2px 9px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .user-dashboard__activities .btn-start {
+        font-size: 9px;
+        padding:3px 8px;
+        border-radius: 3px;
+        margin-left: inherit;
+        margin-bottom: inherit;
+        cursor: pointer;
+    }
+
+    .user-dashboard__activities .other-courses .other-courses-flex {
+        align-items: center !important;
+        -webkit-align-items: center !important;
+        -webkit-flex-direction: unset !important;
+        flex-direction: unset !important;
+    }
+
+    .user-dashboard__activities .other-courses .other-courses-flex .user-offline {
+        padding-left: 1vw;
+    }
+
+    .practice-box .ttl-btn--whitered-swipe {
+        padding: 1px 4px;
+    }
+.user-dashboard__recent .table_Wel {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+.table_Wel > tbody > tr > td, .user-dashboard__recent .table_Wel > thead > tr > th, .getstarted-course, #link-booklibrary {
+    font-size: 14px;
+}
+.user-dashboard__recent .table_Wel a {
+    width:100%;
+    max-width:120px;
+    margin:initial;
+    margin-left:20px;
+}
+.user-dashboard__recent .table_Wel > thead:first-child > tr:first-child > th:last-child {
+    padding-left:20px;
+}
+.user-dashboard__recent .table_Wel .free-exercise-item-desc {
+    width: calc(100% - calc(calc(calc(100vw / 1920) * 10)));
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+}
+.user-dashboard__recent .table_Wel > tbody > tr > td {
+    /*font-size: 16px;*/
+     white-space: normal; 
+}
+/*#endregion*/
+
+/*#region 5. Consultant result */
+.teacher-avatar {
+    border-radius: 50%;
+    margin-right: 5px;
+}
+/*#endregion*/
+/*#region 6. Responsive*/
+/*#region customize font size and elements on large screen*/ 
+/*@media screen and (min-width: 1600px) {
+    .main-heading {
+        font-size: 20px;
+    }
+    .sub-heading, .page-intro, .btn-rectangle-blue, .mid-heading-light, .test-url, .number-of-total-users, .number-of-active-users, .mid-heading-bold-small {
+        font-size: 16px;
+    }
+    .leaderboard-overal, .free-exercise-item-desc, .mid-heading-normal, .table_Wel > tbody > tr > td, .user-dashboard__recent .table_Wel > thead > tr > th, .getstarted-course, #link-booklibrary {
+        font-size: 16px;
+    }
+    .practice-fb-transform, .ttl-btn--whiteblue-swipe, .ttl-btn--whitered-swipel, .ttl-btn--whitered-swipe, .user-dashboard__activities .btn-start, .btn-dark-square {
+        font-size: 14px;
+    }
+    .fb-round .fa-facebook-f {
+        font-size: 14px;
+        background: #3b5998;
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin: auto;
+        text-align: center;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+    .other-courses .page-content-icon img {
+        width: 80px;
+    }
+}*/
+/*#endregion*/
+@media screen and (max-width: 1600px) {
+    .user-dashboard__activities .other-courses .status-dot {
+        height: 7px;
+        width: 7px;
+    }
+
+    .user-dashboard__activities .other-courses .user-active, .user-dashboard__activities .other-courses .user-offline {
+        font-size: 13px;
+    }
+
+    .fb-round {
+        margin-right: 4px !important;
+    }
+
+    .page-heading-social {
+        padding-left: 6px !important;
+    }
+
+    .other-courses .page-content-icon img {
+        width: 5vw;
+    }
+}
+
+@media screen and (max-width:1440px) {
+
+    .page-heading-socia .fb-round .fa-facebook-f {
+        background: #3b5998;
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin: auto;
+        text-align: center;
+        padding-top: 6px;
+        font-size: 10px;
+        padding-right: 1px;
+    }
+
+    .sub-heading-light {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .page-heading .fb-round .fa-facebook-f {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+        padding-right: 1px;
+    }
+}
+
+@media screen and (max-width:1366px) {
+    .js__exercises .fade-round, .js__exercises .practice-test-list {
+        margin-right: 5px !important;
+    }
+    .leaderboard-tab .tab-pane {
+        height: 410px;
+    }
+
+    .practice-test-list {
+        width: 6.5vw;
+    }
+
+    .members-statistics {
+        font-size: 13px;
+    }
+
+    .page-heading .status-dot {
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+    }
+
+    .page-heading .fb-round .fa-facebook-f {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+        padding-right: 1px;
+    }
+
+    .js__selected-book-guideline .test-list {
+        padding-left: 10px;
+    }
+
+    .practice-box .sub-heading {
+        font-size: 14px;
+        font-weight: bold;
+        padding-right: 5px;
+    }
+
+    #partCount-Duration-skillFreePractice {
+        font-size: 10px !important;
+    }
+
+    .user-name-popup {
+        width: 20vw;
+    }
+
+    .your-guideline .modal-header {
+        padding-left: 50px;
+    }
+
+    .your-guideline .modal-body {
+        padding: 2vh 5vw 15vh 5vw;
+    }
+
+    .user-dashboard__activities .other-courses .main-heading {
+        font-size: 16px !important;
+    }
+
+    .user-dashboard__activities .other-courses .status-dot {
+        height: 7px;
+        width: 7px;
+    }
+
+    .user-dashboard__activities .other-courses .user-active, .user-dashboard__activities .other-courses .user-offline {
+        font-size: 12px;
+    }
+
+    .nav > li > a {
+        padding: 10px 10px;
+    }
+
+    .js-guideline-practices-book .fade-round {
+        width: 30px;
+        height: 30px;
+    }
+
+    .js-guideline-practices-book .practice-test-list .mid-heading-light {
+        font-size: 12px;
+    }
+
+    .js-guideline-practices-book .free-exercise-item-practice .ttl-btn.js-btn-action-text {
+        padding: 0 0;
+        width: 5.5rem;
+    }
+
+    /*.js-guideline-practices-book .free-exercise-item-icon {
+        margin: 0 5px 0 0;
+    }*/
+
+    .js-guideline-practices-book .free-exercise-item .free-exercise-item-name,
+    .js-guideline-practices-book .free-exercise-item .free-exercise-item-name-full {
+        font-size: 14px;
+    }
+
+    .view-all-btn {
+        width: 80px;
+        font-size: 13px;
+        margin: -2% auto;
+        height: 0;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+    }
+
+        .view-all-btn .view-text {
+            position: absolute;
+            top: -22px;
+            left: 10%;
+        }
+
+    .scroll-down-arrow {
+        -moz-animation: bounce-down 3s infinite;
+        -webkit-animation: bounce-down 3s infinite;
+        animation: bounce-down 3s infinite;
+        position: absolute;
+        top: -19px;
+        right: 9px;
+    }
+    .user-dashboard__recent .table_Wel a {
+        width: 100%;
+        max-width: 90px;
+        margin: initial;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .page-content-icon img {
+        width: 65px;
+    }
+
+    .page-heading-socia .fb-round .fa-facebook-f {
+        background: #3b5998;
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin: auto;
+        text-align: center;
+        padding-top: 6px;
+        font-size: 10px;
+        padding-right: 1px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .practice-box .practice-box-info {
+        border-right: none;
+    }
+
+    .practice-box .test-list {
+        border-top: 2px solid #47515E;
+    }
+
+    .user-dashboard__progress .free-exercise-item-practice {
+        margin-right: 3vw;
+    }
+
+    .other-courses .page-content-icon img {
+        width: 18vw;
+    }
+}
+/* ----------- iPad Pro - Portrait ----------- */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .practice-test-list {
+        width: 7vw !important;
+    }
+
+    .user-name-popup {
+        width: 28vw;
+    }
+
+    .your-guideline .modal-body {
+        padding: 2vh 8vw 10vh 8vw;
+    }
+
+    .your-guideline .modal-header {
+        padding-left: 65px !important;
+    }
+}
+
+/* ----------- iPad 1, 2, Mini and Air - Portrait and Landscape ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .user-name-popup {
+        width: 40vw;
+    }
+
+    .practice-test-list {
+        width: auto;
+    }
+
+    .your-guideline .modal-body {
+        padding: 2vh 8vw 16vh 8vw;
+    }
+
+    .your-guideline .modal-header {
+        padding-left: 45px;
+    }
+
+    .user-dashboard__activities .other-courses {
+        padding: 1.5vw;
+    }
+
+    .other-courses .page-content-icon img {
+        width: 8.5vw;
+    }
+}
+
+/* ----------- iPad 1, 2, Mini and Air - Landscape  ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .leaderboard-tab .tab-pane {
+        height: 430px;
+    }
+
+    #LeaderboardPopup .leaderboard-item .pdd-vertical-10 {
+        padding-top: 7px !important;
+        padding-bottom: 7px !important;
+    }
+
+    .practice-test-list {
+        width: 7vw;
+    }
+
+    .user-name-popup {
+        width: 28vw;
+    }
+
+    .your-guideline .modal-header {
+        padding-left: 65px;
+    }
+
+    .user-dashboard__activities .other-courses .main-heading {
+        font-size: 18px !important;
+    }
+
+    .user-dashboard__activities .other-courses .status-dot {
+        /*height: 10px;
+        width: 10px;*/
+    }
+
+    .user-dashboard__activities .other-courses .user-active, .user-dashboard__activities .other-courses .user-offline {
+        font-size: 14px;
+    }
+
+    .user-dashboard__activities .btn-start {
+        padding: 0.4vw 2vw;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .other-test .practice-box-img img {
+        height: 100px;
+    }
+
+    #partCount-Duration-skillFreePractice {
+        font-size: 8px !important;
+    }
+
+    .page-content-icon img {
+        width: 80px;
+    }
+
+    .page-heading-social {
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+    }
+
+    .members-statistics {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width: 896px) {
+    .other-test .practice-box-img img {
+        height: 130px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .other-test .practice-box-img img {
+        height: 120px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .user-dashboard__progress .skill-box .skill-free-practice .practice-box {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+
+    #LeaderboardPopup .modal-dialog .leaderboard-tab .nav-tabs {
+        display: flex;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    }
+
+    #LeaderboardPopup .leaderboard-item, #LeaderboardPopup .leaderboard-item-myrank {
+        padding: 0px 15px 0px 0px;
+    }
+
+    #LeaderboardPopup .modal-dialog {
+        top: 50%;
+        transform: translateY(-50%) !important;
+    }
+
+    .overlay-skill-box-text {
+        font-size: 13px;
+        padding: 0px 15px;
+    }
+
+    .skill-box .main-heading {
+        font-size: 16px;
+    }
+
+    .practice-test-list {
+        width: auto;
+    }
+
+    .user-dashboard__progress .practice-box .sub-heading {
+        font-size: 15px;
+    }
+
+    .user-dashboard__progress .practice-box .practice-box-info {
+        border-right: 0;
+    }
+
+    .user-dashboard__progress .practice-box .test-link {
+        font-size: 14px;
+    }
+
+    .practice-box {
+        width: 100%;
+    }
+
+    .practice-fb-transform {
+        margin: 3vw 5vw;
+    }
+
+    .js__selected-book .practice-box .test-list {
+        border-top: 2px solid #47515E;
+    }
+
+    .js__selected-book .fb-round .fa-facebook-f, .user-dashboard__progress .fb-round .fa-facebook-f {
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+        position: relative;
+        margin-top: 2px;
+    }
+
+    .js__selected-book .fa-facebook-f:before, .user-dashboard__progress .fa-facebook-f:before {
+        content: "\f39e";
+        position: absolute;
+        left: calc(50% - 2.5px);
+        top: calc(50% - 5px);
+    }
+
+    .js__selected-book span#view_Total {
+        margin-left: 5px;
+    }
+
+    .js__selected-book span#taker_total {
+        margin-right: 5px;
+    }
+
+    .js__selected-book .btn-white-square {
+        padding: 1px 10px;
+        font-size: 12px;
+        border-radius: 3px;
+        margin: auto 0;
+        cursor: pointer;
+    }
+
+    .user-name-popup {
+        width: 40vw;
+    }
+
+    .your-guideline .modal-dialog {
+        top: 50%;
+        transform: translateY(-50%) !important;
+    }
+
+    .your-guideline .modal-header {
+        padding-left: 20px;
+    }
+
+    .your-guideline .modal-body {
+        padding: 2vh 10vw 15vh 10vw;
+    }
+
+    .your-guideline .progress-summary.no-pdd-left {
+        left: -9px;
+    }
+
+    #LeaderboardPopup .modal-content {
+        padding: 3% 3% 18% 3%;
+    }
+
+
+    .other-books .other-test .practice-box-img img {
+        height: 220px;
+    }
+
+    .other-books .other-test .practice-box-img {
+        max-width: calc(100% / 3);
+        object-fit: cover;
+    }
+
+    .practice-box .practice-box-info {
+        height: auto !important;
+    }
+
+    .nav > li > a {
+        padding: 10px 10px;
+    }
+
+    .practice-box .practice-box-img {
+        max-width: unset;
+        max-height: unset;
+        padding: 5vw 20vw 0vw 20vw;
+    }
+
+    #name-book-skillFreePractice {
+        text-align: center;
+        margin: 2vw 5vw 3vw 5vw;
+    }
+
+    .practice-box-test .flex-box {
+        margin-left: 5vw;
+        margin-right: 4vw;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .other-books .other-test .practice-box-img img {
+        height: 120px;
+    }
+
+    .user-dashboard__activities .other-courses {
+        padding: 3.5vw;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .leaderboard-tab .tab-pane {
+        height: 360px;
+    }
+
+    #LeaderboardPopup .leaderboard-item .pdd-vertical-10 {
+        padding-top: 7px !important;
+        padding-bottom: 7px !important;
+    }
+
+    #LeaderboardPopup .nav-tabs > li > a {
+        margin-right: 0px !important;
+    }
+
+    .overlay-skill-box-text {
+        font-size: 13px;
+        padding: 0px 10px;
+    }
+
+    .skill-box .main-heading {
+        font-size: 16px;
+    }
+
+    .user-dashboard__progress .btn-dark-square {
+        font-size: 3vw;
+        margin-left: 3vw !important;
+    }
+
+    .practice-test-list {
+        width: auto;
+    }
+
+    .user-dashboard__progress .practice-box .sub-heading {
+        font-size: 15px;
+    }
+
+    .user-dashboard__progress .practice-box .practice-box-info {
+        border-right: 0;
+    }
+
+    .user-dashboard__progress .practice-box .test-link {
+        font-size: 14px;
+    }
+
+    .user-name-popup {
+        width: 35vw;
+    }
+
+    .other-books .other-test .practice-box-img img {
+        height: 190px;
+    }
+
+    .other-books .other-test .practice-box-img {
+        max-width: 50%;
+        width: 50% !important;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .other-books .other-test .practice-box-img img {
+        height: 150px;
+    }
+
+    .user-dashboard__activities .other-courses {
+        padding: 3.5vw;
+    }
+}
+
+/* IPhone X - Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+    .leaderboard-tab .tab-pane {
+        height: 400px;
+    }
+}
+/*#endregion*/
