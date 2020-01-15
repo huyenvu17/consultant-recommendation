@@ -3,7 +3,32 @@ var consultancy = (function () {
         dobPicker();
         itemSelect();
         initTimeTable();
+        textInputCount();
+        budgetPlan();
+        initTabs();
     };
+
+    function initTabs() {
+        setTimeout(function(){
+            $('#step1').find('.skeleton-loading').css('display', 'none');
+            $('#step1').find('.step-content').css('display', 'block');
+        }, 500);
+
+        $('.steps-panel a').click(function(){
+            $('.tab-content > div').css('display', 'none');
+            $($(this).attr('href')).css('display', 'block');
+
+            $($(this).attr('href')).find('.skeleton-loading').css('display', 'block');
+            $($(this).attr('href')).find('.step-content').css('display', 'none');
+
+            var el = $(this).attr('href');
+            var f = function(){
+                $(el).find('.skeleton-loading').css('display', 'none');
+                $(el).find('.step-content').css('display', 'block');
+            }
+            setTimeout(f, 500);
+        });
+    }
 
     function dobPicker() {
         var currYear = (new Date()).getFullYear();
@@ -22,6 +47,8 @@ var consultancy = (function () {
     }
 
     function initTimeTable() {
+        $('.tooltipped').tooltip();
+        
         $('.mnop > tbody > tr > td').on('mouseenter', function (e) {
             $(this).addClass('mouseon');
             var num = ($(this).closest('tr').find('td')).index($(this).closest('td')) + 1;
@@ -121,6 +148,33 @@ var consultancy = (function () {
         return $rs;
     }
 
+    function textInputCount() {
+        $('textarea#note').characterCounter();
+    }
+    function budgetPlan() {
+        var slider = document.getElementById('test-slider');
+        noUiSlider.create(slider, {
+            start: [0, 5000000],
+            connect: true,
+            step: 500000,
+            tooltips: true,
+            orientation: 'horizontal', // 'horizontal' or 'vertical'
+            range: {
+                'min': 3000000,
+                'max': 12000000
+            },
+            format: wNumb({
+                decimals: 0,
+                postfix: 'đ',
+                thousand: ',',
+            }),
+            pips: {
+                mode: 'range',
+                stepped: true,
+                density: 4
+            }
+        });
+    }
     return {
         initConsultancy,
         getTimeTableData
