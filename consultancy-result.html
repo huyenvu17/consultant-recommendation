@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="consultancy.css">
   <link rel="stylesheet" href="dashboard/page-layout.css">
   <link rel="stylesheet" href="dashboard/consultancy-result-dashboard.css">
+  <link rel="stylesheet" href="dashboard/book-library.css">
 
 </head>
 <body>
@@ -597,24 +598,7 @@
                                                         </div>
                                                     </div>
                                                     
-                                                    <script>
-                                                        var lib_path = location.pathname;
-                                                        var lib_url = location.origin + '/library';
-                                                    
-                                                        $('#show-book-info.modal-bookLibraryForYou').on('show.bs.modal', function (e) {
-                                                            $('#show-book-info.modal .modal-dialog').attr('class', 'modal-dialog fadeInUp animated');
-                                                            spinOn();
-                                                        })
-                                                        $('#show-book-info.modal-bookLibraryForYou').on('hide.bs.modal', function (e) {
-                                                            $('#show-book-info.modal .modal-dialog').attr('class', 'modal-dialog fadeOutDown animated');
-                                                            History.pushState(null, "Practice IELTS and TOEIC - Completely Free", `/${lib_path}`);
-                                                        })
-                                                    
-                                                        $("#bookLibraryForYou .changeurl img, #bookLibraryForYou .changeurl .label-premium").on('click', function (e) {
-                                                            let temp = $(e.target).parents('a').attr("data-link");
-                                                            History.pushState(null, "Practice IELTS and TOEIC - Completely Free", temp);
-                                                        });
-                                                    </script></div>
+                                                    </div>
                           </div>
                              
                       </div>
@@ -633,10 +617,12 @@
       <script src="extras/wNumb.js"></script>
       <script src="dashboard/marquee.js"></script>
       <script src="consultancy.js"></script>
+      <script src="dashboard/book-library.js"></script>
       <script>
         $(document).ready(function () {
           consultancy.initConsultancy();
         });
+
       </script>
 </body>
 
