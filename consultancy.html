@@ -2,429 +2,911 @@
 <html lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fake AI Consultant</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fake AI Consultant</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap&subset=vietnamese"
-    rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" href="extras/nouislider.css">
-  <link rel="stylesheet" href="consultancy.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="extras/nouislider.css">
+    <link rel="stylesheet" href="consultancy.css">
 </head>
 
 <body>
-  <div class="consultancy">
-    <div class="container">
-      <div class="consultancy__logo">
-        <img src="logo-alt.svg" alt="">
-      </div>
-      <div class="consultancy__content">
-        <div class="row">
-          <div class="col-xs-12">
-            <ul class="nav nav-pills steps-panel">
-              <li class="col-md-4 col-sm-4 col-xs-4 active" data-step="1">
-                <a href="#step1">
-                <span>Thông tin cơ bản</span>
-              </a>
-              </li>
-              <li class="col-md-4 col-sm-4 col-xs-4 step-mrg-left" data-step="2">
-                <a href="#step2">
-                <span>Cá nhân hóa khóa học</span>
-              </a>
-            </li>
-              <li class="col-md-4 col-sm-4 col-xs-4 step-mrg-left text-right" data-step="3">
-                <a href="#step3">
-                  <span>Kết quả</span>
-                </a>
-              </li>
-            </ul>
-
-          </div>
-        </div>
-        <div class="tab-content">
-          <!-- Step 1 - personal information-->
-          <div id="step1" class="row personal-info-form step-form">
-            <div class="col s12">
-              <div class="row">
-                <div class="input-field col s6">
-                  <input placeholder="" id="fullname" type="text" required class="validate">
-                  <label for="fullname">Họ và tên <span class="label-required">*</span></label>
-                  <span class="helper-text" data-error="vui lòng nhập họ tên"></span>
-                </div>
-                <div class="input-field input-dob col s6">
-                  <input placeholder="" id="fullname" type="text" required class="datepicker validate"
-                    format="dd/mm/yyyy">
-                  <i class="far fa-calendar calendar-icon"></i>
-                  <label for="fullname">Ngày tháng năm sinh <span class="label-required">*</span></label>
-                  <span class="helper-text" data-error="vui lòng nhập ngày sinh"></span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s6">
-                  <input placeholder="" id="tel" type="tel" class="validate" required>
-                  <label for="tel">Số điện thoại <span class="label-required">*</span></label>
-                  <span class="helper-text" data-error="vui lòng nhập số điện thoại"></span>
-                </div>
-                <div class="input-field col s6">
-                  <input placeholder="" id="email" type="email" class="validate" required="Vui lòng nhập email">
-                  <label for="email">Email <span class="label-required">*</span></label>
-                  <span class="helper-text"
-                    data-error="Vui lòng nhập đúng định dạng email. Ví dụ: alt@gmail.com"></span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s6">
-                  <select id="occupation">
-                    <option value="" disabled>Chọn nghề nghiệp</option>
-                    <option value="1">Người đi làm</option>
-                    <option value="2" selected>Sinh viên</option>
-                    <option value="3">Học sinh</option>
-                  </select>
-                  <label>Nghề nghiệp <span class="label-required">*</span></label>
-                </div>
-                <div class="input-field col s6">
-                  <textarea placeholder="" id="learningPurposes" class="materialize-textarea"></textarea>
-                  <label for="learningPurposes">Mục đích học IELTS</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s6">
-                  <input placeholder="" id="desiredTime" type="text" required class="validate">
-                  <label for="desiredTime">Thời gian cần lấy bằng <span class="label-required">*</span></label>
-                  <span class="helper-text" data-error="vui lòng nhập thời gian cần lấy bằng"></span>
-                </div>
-                <div class="input-field col s6">
-                  <select id="branch" required class="validate">
-                    <option value="" disabled>Chọn nghề nghiệp</option>
-                    <option value="1">Phan Chu Trinh</option>
-                    <option value="2">Hoàng Văn Thụ</option>
-                    <option value="3">Bàu Cát</option>
-                    <option value="4">Lê Hồng Phong</option>
-                  </select>
-                  <label>Chi nhánh học <span class="label-required">*</span></label>
-                  <span class="helper-text" data-error="vui lòng chọn chi nhánh học"></span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s6">
-                  <div class="input-field input-field-custom-margin-vertical">
-                    <div class="">
-                      <span>Overal</span>
-                      <div class="input-field inline">
-                        <select id="overalScore">
-                          <option value="" disabled>Chọn điểm</option>
-                          <option value="1">4.0</option>
-                          <option value="2" selected>4.5</option>
-                          <option value="3">5.0</option>
-                        </select>
-                      </div>
-                    </div>
-                    <label class="score-group-label">Điểm đầu vào <span class="label-required">*</span></label>
-                    <span class="helper-text" data-error="vui lòng chọn điểm"></span>
-                  </div>
-
-                  <div class="child-score">
-                    <div class="skill-score">
-                      <span>L</span>
-                      <div class="input-field inline">
-                        <select id="listeningScore">
-                          <option value="" disabled>Chọn mức điểm</option>
-                          <option value="1">4.0</option>
-                          <option value="2" selected>4.5</option>
-                          <option value="3">5.0</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="skill-score">
-                      <span>R</span>
-                      <div class="input-field inline">
-                        <select id="readingScore">
-                          <option value="" disabled>Chọn nghề nghiệp</option>
-                          <option value="1">4.0</option>
-                          <option value="2" selected>4.5</option>
-                          <option value="3">5.0</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="skill-score">
-                      <span>W</span>
-                      <div class="input-field inline">
-                        <select id="writingScore">
-                          <option value="" disabled>Chọn mức điểm</option>
-                          <option value="1">4.0</option>
-                          <option value="2" selected>4.5</option>
-                          <option value="3">5.0</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="skill-score">
-                      <span>S</span>
-                      <div class="input-field inline">
-                        <select id="speakingScore">
-                          <option value="" disabled>Chọn mức điểm</option>
-                          <option value="1">4.0</option>
-                          <option value="2" selected>4.5</option>
-                          <option value="3">5.0</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6">
-                  <div class="input-field input-field-custom-margin-vertical">
-                    <div class="">
-                      <span>Overal</span>
-                      <div class="input-field inline">
-                        <select id="overalScore">
-                          <option value="" disabled>Chọn điểm</option>
-                          <option value="1">4.0</option>
-                          <option value="2" selected>4.5</option>
-                          <option value="3">5.0</option>
-                        </select>
-                      </div>
-                    </div>
-                    <label class="score-group-label">Điểm mong muốn <span class="label-required">*</span></label>
-                    <span class="helper-text" data-error="vui lòng chọn điểm"></span>
-                  </div>
-
-                  <div class="child-score">
-                    <div class="skill-score">
-                      <span>L</span>
-                      <div class="input-field inline">
-                        <select id="listeningScore">
-                          <option value="" disabled>Chọn mức điểm</option>
-                          <option value="1">4.0</option>
-                          <option value="2" selected>4.5</option>
-                          <option value="3">5.0</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="skill-score">
-                      <span>R</span>
-                      <div class="input-field inline">
-                        <select id="readingScore">
-                          <option value="" disabled>Chọn mức điểm</option>
-                          <option value="1">4.0</option>
-                          <option value="2" selected>4.5</option>
-                          <option value="3">5.0</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="skill-score">
-                      <span>W</span>
-                      <div class="input-field inline">
-                        <select id="writingScore">
-                          <option value="" disabled>Chọn mức điểm</option>
-                          <option value="1">4.0</option>
-                          <option value="2" selected>4.5</option>
-                          <option value="3">5.0</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="skill-score">
-                      <span>S</span>
-                      <div class="input-field inline">
-                        <select id="speakingScore">
-                          <option value="" disabled>Chọn mức điểm</option>
-                          <option value="1">4.0</option>
-                          <option value="2" selected>4.5</option>
-                          <option value="3">5.0</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s6">
-                  <select id="occupation">
-                    <option value="" disabled>Chọn nghề nghiệp</option>
-                    <option value="1">Người đi làm</option>
-                    <option value="2" selected>Sinh viên</option>
-                    <option value="3">Học sinh</option>
-                  </select>
-                  <label>Nghề nghiệp <span class="label-required">*</span></label>
-                </div>
-                <div class="input-field col s6">
-                  <textarea placeholder="" id="note" class="materialize-textarea" data-length="120"></textarea>
-                  <label for="note">Ghi chú</label>
-                </div>
-              </div>
-              <div class="row text-center">
-                <a href="#0" class="back-link btn-reset">Reset</a>
-                <a class="waves-effect waves-light btn btn-next js-next">Tiếp</a>
-              </div>
-            </div>
-          </div>
-          <!-- Step 2 - personalized learning course-->
-          <div id="step2" class="row learning-course-form step-form" style="display: none;" >
-            <div class="col s12">
-              <div class="row">
-                <div class="input-field col s6 no-mrg">
-                  <div class="input-field inline no-mrg" style="width:40%">
-                    <input placeholder="" id="selfStudyTime" type="number" min="1" required class="validate">
-                    <label for="selfStudyTime" class="zero-left">Thời gian tự học <span
-                        class="label-required">*</span></label>
-                    <span class="helper-text" data-error="Vui lòng nhập thời gian tự học"></span>
-                  </div>
-                  <div class="input-field inline inline-text">
-                    <span>giờ/ngày</span>
-                  </div>
-                </div>
-              </div>
-              <div class="row radio-choice">
-                <div class="input-field col s12">
-                  <p>Trong lớp học, bạn là người như thế nào?<span class="label-required">*</span></p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="personality" type="radio" />
-                      <span>Đến lớp chỉ nghe bài giảng và làm theo yêu cầu của giáo viên</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="personality" type="radio" />
-                      <span>Thường xuyên tương tác với bạn bè để học tốt hơn</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="personality" type="radio" />
-                      <span>Thường xuyên trao đổi với giáo viên khi có điều cần giải đáp</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="personality" type="radio" />
-                      <span>Tuỳ theo tâm trạng mỗi ngày</span>
-                    </label>
-                  </p>
-                </div>
-              </div>
-              <div class="row radio-choice">
-                <div class="input-field col s12">
-                  <p>Bạn muốn học với giáo viên có tính cách như thế nào?<span class="label-required">*</span></p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="teacher" type="radio" />
-                      <span>Cởi mở, dễ gần, chủ động hỏi han học viên</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="teacher" type="radio" />
-                      <span>Nghiêm túc, kỷ luật, trách nhiệm</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="teacher" type="radio" />
-                      <span>Vui vẻ khi giảng bài nhưng nghiêm khắc kiểm tra bài tập về nhà</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="teacher" type="radio" />
-                      <span>Có thể nghiêm nghị ở lớp nhưng dễ thông cảm khi học viên không hoàn thành hết bài tập về
-                        nhà</span>
-                    </label>
-                  </p>
-                </div>
-              </div>
-              <div class="row radio-choice">
-                <div class="input-field col s12">
-                  <p>Bạn thích cách học nào sau đây?<span class="label-required">*</span></p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="learning-method" type="radio" />
-                      <span>Giáo viên chỉ cần tập trung giảng bài, khi có thắc mắc bạn sẽ chủ động hỏi</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="learning-method" type="radio" />
-                      <span>Giáo viên liên tục tương tác với học viên trong suốt quá trình học</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="learning-method" type="radio" />
-                      <span>Giáo viên chia sẻ nhiều bí quyết, mẹo vặt để đạt điểm cao</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="learning-method" type="radio" />
-                      <span>Giáo viên truyền tải kiến thức, trau dồi những kỹ năng học viên còn yếu</span>
-                    </label>
-                  </p>
-                </div>
-              </div>
-              <div class="row radio-choice">
-                <div class="input-field col s12">
-                  <p>Bạn muốn luyện tập hay làm bài thi IELTS:<span class="label-required">*</span></p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="test-type" type="radio" />
-                      <span>Trên giấy</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="test-type" type="radio" />
-                      <span>Trên máy tính</span>
-                    </label>
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 budget-slider">
-                  <p>Ngân sách tối đa mỗi tháng bạn có thể chi cho khoá học là:<span class="label-required">*</span></p>
-                  <div id="test-slider" class="range-field"></div>
-                </div>
-              </div>
-              <div class="row text-center">
-                <a href="#0" class="back-link btn-prev">Trở về</a>
-                <a class="waves-effect waves-light btn btn-next js-personal-info ">Tiếp</a>
-              </div>
-            </div>
-          </div>
-          <!-- Step 3 - Finish -->
-          <div id="step3" class="row result-form step-form" style="display: none;">
-            <div class="col s12">
-              <div style="width: 60%;margin: auto;">
+    <div class="consultancy">
+        <div class="container">
+            <div class="consultancy__logo">
                 <img src="logo-alt.svg" alt="">
-              </div>
-              <div class="row text-center result-links">
-                <a href="#0" class="back-link btn-reload">làm lại khảo sát</a>
-                <a class="waves-effect waves-light btn btn-next js-result-form">Xem kết quả</a>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- jQuery -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <!-- Bootstrap JavaScript -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="extras/nouislider.js"></script>
-      <script src="extras/wNumb.js"></script>
-      <script src="consultancy.js"></script>
-      <script>
+            <div class="consultancy__content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="nav nav-pills steps-panel">
+                            <li class="col-md-4 col-sm-4 col-xs-4 active" data-step="1">
+                                <a href="#step1">
+                                    <span>Thông tin cơ bản</span>
+                                </a>
+                            </li>
+                            <li class="col-md-4 col-sm-4 col-xs-4 step-mrg-left" data-step="2">
+                                <a href="#step2">
+                                    <span>Cá nhân hóa khóa học</span>
+                                </a>
+                            </li>
+                            <li class="col-md-4 col-sm-4 col-xs-4 step-mrg-left text-right" data-step="3">
+                                <a href="#step3">
+                                    <span>Kết quả</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <!-- Step 1 - personal information-->
+                    <div id="step1" class="row personal-info-form">
+                        <div class="col s12 skeleton-loading">
+                                            <div class="row">
+                                                <div class="input-field col s6" style="margin-top: 0">
+                                                    <div class="testList--isloading mrg-vertical-10">
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-main-text"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-input"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-field col s6" style="margin-top: 0">
+                                                    <div class="testList--isloading mrg-vertical-10">
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-main-text"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-input"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s6" style="margin-top: 0">
+                                                    <div class="testList--isloading mrg-vertical-10">
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-main-text"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-input"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-field col s6" style="margin-top: 0">
+                                                    <div class="testList--isloading mrg-vertical-10">
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-main-text"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-input"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s6" style="margin-top: 0">
+                                                    <div class="testList--isloading mrg-vertical-10">
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-main-text"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-input"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-field col s6" style="margin-top: 0">
+                                                    <div class="testList--isloading mrg-vertical-10">
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-main-text"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-input"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s6" style="margin-top: 0">
+                                                    <div class="testList--isloading mrg-vertical-10">
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-main-text"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-input"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-field col s6" style="margin-top: 0">
+                                                    <div class="testList--isloading mrg-vertical-10">
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-main-text"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-input"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col s6">
+                                                    <div class="input-field input-field-custom-margin-vertical">
+                                                        <div class="testList--isloading mrg-vertical-10"
+                                                            style="height: 110px; z-index: 0">
+                                                            <div class="loading-content">
+                                                                <div class="loading-text-container">
+                                                                    <div class="loading-main-text"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="loading-content">
+                                                                <div class="loading-text-container"
+                                                                    style="display: flex;align-items: center;">
+                                                                    <div class="loading-main-text"
+                                                                        style="width: 30%;height: 20px;"></div>
+                                                                    <div class="loading-input"
+                                                                        style="width: 65%; margin-left: 5%"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="child-score">
+                                                        <div class="testList--isloading mrg-vertical-10"
+                                                            style="height: 110px; z-index: 99; width: 100%">
+                                                            <div class="loading-content">
+                                                                <div class="loading-text-container"
+                                                                    style="display: flex;align-items: center;justify-content: space-between;">
+                                                                    <div class="loading-input-child"></div>
+                                                                    <div class="loading-input-child"></div>
+                                                                    <div class="loading-input-child"></div>
+                                                                    <div class="loading-input-child"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col s6">
+                                                    <div class="input-field input-field-custom-margin-vertical">
+                                                        <div class="testList--isloading mrg-vertical-10"
+                                                            style="height: 110px">
+                                                            <div class="loading-content">
+                                                                <div class="loading-text-container">
+                                                                    <div class="loading-main-text"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="loading-content">
+                                                                <div class="loading-text-container"
+                                                                    style="display: flex;align-items: center;">
+                                                                    <div class="loading-main-text"
+                                                                        style="width: 30%;height: 20px;"></div>
+                                                                    <div class="loading-input"
+                                                                        style="width: 65%; margin-left: 5%"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="child-score">
+                                                        <div class="testList--isloading mrg-vertical-10"
+                                                            style="height: 110px; z-index: 99; width: 100%">
+                                                            <div class="loading-content">
+                                                                <div class="loading-text-container"
+                                                                    style="display: flex;align-items: center;justify-content: space-between;">
+                                                                    <div class="loading-input-child"></div>
+                                                                    <div class="loading-input-child"></div>
+                                                                    <div class="loading-input-child"></div>
+                                                                    <div class="loading-input-child"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s6" style="margin-top: 0">
+                                                    <div class="testList--isloading mrg-vertical-10">
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-main-text"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-input"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-field col s6" style="margin-top: 0">
+                                                    <div class="testList--isloading mrg-vertical-10">
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-main-text"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-input"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12"
+                                                    style="margin-top: 0;margin-bottom: 0;">
+                                                    <div class="testList--isloading mrg-vertical-10"
+                                                        style=" height: 30px">
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-main-text"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-field col s12">
+                                                    <div class="testList--isloading mrg-vertical-10"
+                                                        style=" height: 205px">
+                                                        <div class="loading-content">
+                                                            <div class="loading-text-container">
+                                                                <div class="loading-table"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                        </div>
+                        <div class="col s12 step-content" style="display: none">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="" id="fullname" type="text" required
+                                        class="validate">
+                                    <label for="fullname">Họ và tên <span
+                                            class="label-required">*</span></label>
+                                    <span class="helper-text" data-error="vui lòng nhập họ tên"></span>
+                                </div>
+                                <div class="input-field input-dob col s6">
+                                    <input placeholder="" id="fullname" type="text" required
+                                        class="datepicker validate" format="dd/mm/yyyy">
+                                    <i class="far fa-calendar calendar-icon"></i>
+                                    <label for="fullname">Ngày tháng năm sinh <span
+                                            class="label-required">*</span></label>
+                                    <span class="helper-text"
+                                        data-error="vui lòng nhập ngày sinh"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="" id="tel" type="tel" class="validate" required>
+                                    <label for="tel">Số điện thoại <span
+                                            class="label-required">*</span></label>
+                                    <span class="helper-text"
+                                        data-error="vui lòng nhập số điện thoại"></span>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="" id="email" type="email" class="validate"
+                                        required="Vui lòng nhập email">
+                                    <label for="email">Email <span
+                                            class="label-required">*</span></label>
+                                    <span class="helper-text"
+                                        data-error="Vui lòng nhập đúng định dạng email. Ví dụ: alt@gmail.com"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <select id="occupation">
+                                        <option value="" disabled>Chọn nghề nghiệp</option>
+                                        <option value="1">Người đi làm</option>
+                                        <option value="2" selected>Sinh viên</option>
+                                        <option value="3">Học sinh</option>
+                                    </select>
+                                    <label>Nghề nghiệp <span class="label-required">*</span></label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <textarea placeholder="" id="learningPurposes"
+                                        class="materialize-textarea"></textarea>
+                                    <label for="learningPurposes">Mục đích học IELTS</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="" id="desiredTime" type="text" required
+                                        class="validate">
+                                    <label for="desiredTime">Thời gian cần lấy bằng <span
+                                            class="label-required">*</span></label>
+                                    <span class="helper-text"
+                                        data-error="vui lòng nhập thời gian cần lấy bằng"></span>
+                                </div>
+                                <div class="input-field col s6">
+                                    <select id="branch" required class="validate">
+                                        <option value="" disabled>Chọn nghề nghiệp</option>
+                                        <option value="1">Phan Chu Trinh</option>
+                                        <option value="2">Hoàng Văn Thụ</option>
+                                        <option value="3">Bàu Cát</option>
+                                        <option value="4">Lê Hồng Phong</option>
+                                    </select>
+                                    <label>Chi nhánh học <span class="label-required">*</span></label>
+                                    <span class="helper-text"
+                                        data-error="vui lòng chọn chi nhánh học"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <div class="input-field input-field-custom-margin-vertical">
+                                        <div class="">
+                                            <span>Overal</span>
+                                            <div class="input-field inline">
+                                                <select id="overalScore">
+                                                    <option value="" disabled>Chọn điểm</option>
+                                                    <option value="1">4.0</option>
+                                                    <option value="2" selected>4.5</option>
+                                                    <option value="3">5.0</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <label class="score-group-label">Điểm đầu vào <span
+                                                class="label-required">*</span></label>
+                                        <span class="helper-text"
+                                            data-error="vui lòng chọn điểm"></span>
+                                    </div>
+                                    <div class="child-score">
+                                        <div class="skill-score">
+                                            <span>L</span>
+                                            <div class="input-field inline">
+                                                <select id="listeningScore">
+                                                    <option value="" disabled>Chọn mức điểm</option>
+                                                    <option value="1">4.0</option>
+                                                    <option value="2" selected>4.5</option>
+                                                    <option value="3">5.0</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="skill-score">
+                                            <span>R</span>
+                                            <div class="input-field inline">
+                                                <select id="readingScore">
+                                                    <option value="" disabled>Chọn nghề nghiệp</option>
+                                                    <option value="1">4.0</option>
+                                                    <option value="2" selected>4.5</option>
+                                                    <option value="3">5.0</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="skill-score">
+                                            <span>W</span>
+                                            <div class="input-field inline">
+                                                <select id="writingScore">
+                                                    <option value="" disabled>Chọn mức điểm</option>
+                                                    <option value="1">4.0</option>
+                                                    <option value="2" selected>4.5</option>
+                                                    <option value="3">5.0</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="skill-score">
+                                            <span>S</span>
+                                            <div class="input-field inline">
+                                                <select id="speakingScore">
+                                                    <option value="" disabled>Chọn mức điểm</option>
+                                                    <option value="1">4.0</option>
+                                                    <option value="2" selected>4.5</option>
+                                                    <option value="3">5.0</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s6">
+                                    <div class="input-field input-field-custom-margin-vertical">
+                                        <div class="">
+                                            <span>Overal</span>
+                                            <div class="input-field inline">
+                                                <select id="overalScore">
+                                                    <option value="" disabled>Chọn điểm</option>
+                                                    <option value="1">4.0</option>
+                                                    <option value="2" selected>4.5</option>
+                                                    <option value="3">5.0</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <label class="score-group-label">Điểm mong muốn <span
+                                                class="label-required">*</span></label>
+                                        <span class="helper-text"
+                                            data-error="vui lòng chọn điểm"></span>
+                                    </div>
+                                    <div class="child-score">
+                                        <div class="skill-score">
+                                            <span>L</span>
+                                            <div class="input-field inline">
+                                                <select id="listeningScore">
+                                                    <option value="" disabled>Chọn mức điểm</option>
+                                                    <option value="1">4.0</option>
+                                                    <option value="2" selected>4.5</option>
+                                                    <option value="3">5.0</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="skill-score">
+                                            <span>R</span>
+                                            <div class="input-field inline">
+                                                <select id="readingScore">
+                                                    <option value="" disabled>Chọn mức điểm</option>
+                                                    <option value="1">4.0</option>
+                                                    <option value="2" selected>4.5</option>
+                                                    <option value="3">5.0</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="skill-score">
+                                            <span>W</span>
+                                            <div class="input-field inline">
+                                                <select id="writingScore">
+                                                    <option value="" disabled>Chọn mức điểm</option>
+                                                    <option value="1">4.0</option>
+                                                    <option value="2" selected>4.5</option>
+                                                    <option value="3">5.0</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="skill-score">
+                                            <span>S</span>
+                                            <div class="input-field inline">
+                                                <select id="speakingScore">
+                                                    <option value="" disabled>Chọn mức điểm</option>
+                                                    <option value="1">4.0</option>
+                                                    <option value="2" selected>4.5</option>
+                                                    <option value="3">5.0</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <label style="top: -30px;">Thời gian học <span
+                                            class="label-required">*</span></label>
+                                            
+                                    <table class="abcd">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 0;">
+                                                    <table class="efgh setting"
+                                                        style="border-left: 1px solid #ddd;width: 60px;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="ijkl"
+                                                                    style="display: flex;flex-direction: column;position:relative;padding-top: inherit;">
+                                                                    <span style="text-align: end;margin-bottom: 8px;
+                                                margin-top: 5px;">Thứ</span>
+                                                                    <span
+                                                                        style="text-align: start;">Buổi</span>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr height="50">
+                                                                <td><span>Sáng</span></td>
+                                                            </tr>
+                                                            <tr height="50">
+                                                                <td><span>Chiều</span></td>
+                                                            </tr>
+                                                            <tr height="50">
+                                                                <td><span>Tối</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="padding: 0;">
+                                                    <table
+                                                        class="efgh mnop table-hover table-condensed table-bordered"
+                                                        style="table-layout: fixed">
+                                                        <thead>
+                                                            <tr>
+                                                                <th id="t2">Hai</th>
+                                                                <th id="t3">Ba</th>
+                                                                <th id="t4">Tư</th>
+                                                                <th id="t5">Năm</th>
+                                                                <th id="t6">Sáu</th>
+                                                                <th id="t7">Bảy</th>
+                                                                <th id="cn">CN</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr id="sang" value="1">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr id="chieu" value="2">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr id="toi" value="3">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr id="delete-table" height="0"
+                                                                style="border-bottom: 1px solid transparent!important;"
+                                                                class="tooltipped" data-position="right"
+                                                                data-tooltip="Clear all">
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="input-field col s6">
+                                    <textarea placeholder="" id="note" class="materialize-textarea"
+                                        data-length="120"></textarea>
+                                    <label for="note">Ghi chú</label>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <a href="#0" class="back-link btn-reset">Reset</a>
+                                <a class="waves-effect waves-light btn btn-next js-next">Tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 2 - personalized learning course-->
+                    <div id="step2" class="row learning-course-form" style="display: none;">
+                        <div class="col s12 skeleton-loading">
+                            <div class="row">
+                                <div class="input-field col s6 no-mrg">
+                                    <div class="testList--isloading mrg-vertical-10"
+                                        style="height: 95px; z-index: 0">
+                                        <div class="loading-content">
+                                            <div class="loading-text-container">
+                                                <div class="loading-main-text"></div>
+                                            </div>
+                                        </div>
+                                        <div class="loading-content">
+                                            <div class="loading-text-container"
+                                                style="display: flex;align-items: center;">
+                                                <div class="loading-input"
+                                                    style="width: 45%; margin-right: 5%"></div>
+                                                <div class="loading-main-text"
+                                                    style="width: 30%;height: 20px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row radio-choice">
+                                <div class="testList--isloading mrg-vertical-10"
+                                    style="height: 212px; z-index: 0; margin-left: 10px;">
+                                    <div class="loading-content">
+                                        <div class="loading-text-container">
+                                            <div class="loading-main-text"></div>
+                                        </div>
+                                    </div>
+                                    <div class="loading-content">
+                                        <div class="loading-text-container">
+                                            <div class="loading-input-answer"></div>
+                                            <div class="loading-input-answer"></div>
+                                            <div class="loading-input-answer"></div>
+                                            <div class="loading-input-answer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row radio-choice">
+                                <div class="testList--isloading mrg-vertical-10"
+                                    style="height: 212px; z-index: 0; margin-left: 10px;">
+                                    <div class="loading-content">
+                                        <div class="loading-text-container">
+                                            <div class="loading-main-text"></div>
+                                        </div>
+                                    </div>
+                                    <div class="loading-content">
+                                        <div class="loading-text-container">
+                                            <div class="loading-input-answer"></div>
+                                            <div class="loading-input-answer"></div>
+                                            <div class="loading-input-answer"></div>
+                                            <div class="loading-input-answer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row radio-choice">
+                                <div class="testList--isloading mrg-vertical-10"
+                                    style="height: 212px; z-index: 0; margin-left: 10px;">
+                                    <div class="loading-content">
+                                        <div class="loading-text-container">
+                                            <div class="loading-main-text"></div>
+                                        </div>
+                                    </div>
+                                    <div class="loading-content">
+                                        <div class="loading-text-container">
+                                            <div class="loading-input-answer"></div>
+                                            <div class="loading-input-answer"></div>
+                                            <div class="loading-input-answer"></div>
+                                            <div class="loading-input-answer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row radio-choice">
+                                <div class="testList--isloading mrg-vertical-10"
+                                    style="height: 112px; z-index: 0; margin-left: 10px;">
+                                    <div class="loading-content">
+                                        <div class="loading-text-container">
+                                            <div class="loading-main-text"></div>
+                                        </div>
+                                    </div>
+                                    <div class="loading-content">
+                                        <div class="loading-text-container">
+                                            <div class="loading-input-answer"></div>
+                                            <div class="loading-input-answer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="testList--isloading mrg-vertical-10"
+                                    style="height: 112px; z-index: 0; margin-top: 30px; margin-left: 10px;">
+                                    <div class="loading-content">
+                                        <div class="loading-text-container">
+                                            <div class="loading-main-text"></div>
+                                        </div>
+                                    </div>
+                                    <div class="loading-content">
+                                        <div class="loading-text-container">
+                                            <div class="loading-input-slider"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <a href="#0" class="back-link btn-prev">Trở về</a>
+                                <a class="waves-effect waves-light btn btn-next js-personal-info ">Tiếp</a>
+                            </div>
+                        </div>
+                        <div class="col s12  step-content" style="display: none">
+                            <div class="row">
+                                <div class="input-field col s6 no-mrg">
+                                    <div class="input-field inline no-mrg" style="width:40%">
+                                        <input placeholder="" id="selfStudyTime" type="number" min="1"
+                                            required class="validate">
+                                        <label for="selfStudyTime" class="zero-left">Thời gian tự học
+                                            <span class="label-required">*</span></label>
+                                        <span class="helper-text"
+                                            data-error="Vui lòng nhập thời gian tự học"></span>
+                                    </div>
+                                    <div class="input-field inline inline-text">
+                                        <span>giờ/ngày</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row radio-choice">
+                                <div class="input-field col s12">
+                                    <p>Trong lớp học, bạn là người như thế nào?<span
+                                            class="label-required">*</span></p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="personality" type="radio" />
+                                            <span>Đến lớp chỉ nghe bài giảng và làm theo yêu cầu của
+                                                giáo viên</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="personality" type="radio" />
+                                            <span>Thường xuyên tương tác với bạn bè để học tốt
+                                                hơn</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="personality" type="radio" />
+                                            <span>Thường xuyên trao đổi với giáo viên khi có điều cần
+                                                giải đáp</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="personality" type="radio" />
+                                            <span>Tuỳ theo tâm trạng mỗi ngày</span>
+                                        </label>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row radio-choice">
+                                <div class="input-field col s12">
+                                    <p>Bạn muốn học với giáo viên có tính cách như thế nào?<span
+                                            class="label-required">*</span></p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="teacher" type="radio" />
+                                            <span>Cởi mở, dễ gần, chủ động hỏi han học viên</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="teacher" type="radio" />
+                                            <span>Nghiêm túc, kỷ luật, trách nhiệm</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="teacher" type="radio" />
+                                            <span>Vui vẻ khi giảng bài nhưng nghiêm khắc kiểm tra bài
+                                                tập về nhà</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="teacher" type="radio" />
+                                            <span>Có thể nghiêm nghị ở lớp nhưng dễ thông cảm khi học
+                                                viên không hoàn thành hết bài tập về
+                                                nhà</span>
+                                        </label>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row radio-choice">
+                                <div class="input-field col s12">
+                                    <p>Bạn thích cách học nào sau đây?<span
+                                            class="label-required">*</span></p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="learning-method"
+                                                type="radio" />
+                                            <span>Giáo viên chỉ cần tập trung giảng bài, khi có thắc mắc
+                                                bạn sẽ chủ động hỏi</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="learning-method"
+                                                type="radio" />
+                                            <span>Giáo viên liên tục tương tác với học viên trong suốt
+                                                quá trình học</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="learning-method"
+                                                type="radio" />
+                                            <span>Giáo viên chia sẻ nhiều bí quyết, mẹo vặt để đạt điểm
+                                                cao</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="learning-method"
+                                                type="radio" />
+                                            <span>Giáo viên truyền tải kiến thức, trau dồi những kỹ năng
+                                                học viên còn yếu</span>
+                                        </label>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row radio-choice">
+                                <div class="input-field col s12">
+                                    <p>Bạn muốn luyện tập hay làm bài thi IELTS:<span
+                                            class="label-required">*</span></p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="test-type" type="radio" />
+                                            <span>Trên giấy</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="test-type" type="radio" />
+                                            <span>Trên máy tính</span>
+                                        </label>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 budget-slider">
+                                    <p>Ngân sách tối đa mỗi tháng bạn có thể chi cho khoá học là:<span
+                                            class="label-required">*</span></p>
+                                    <div id="test-slider" class="range-field"></div>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <a href="#0" class="back-link btn-prev">Trở về</a>
+                                <a class="waves-effect waves-light btn btn-next js-personal-info ">Tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 3 - Finish -->
+                    <div id="step3" class="row result-form step-form" style="display: none;">
+                        <div class="col s12">
+                            <div style="width: 60%;margin: auto;">
+                                <img src="logo-alt.svg" alt="">
+                            </div>
+                            <div class="row text-center result-links">
+                                <a href="#0" class="back-link btn-reload">làm lại khảo sát</a>
+                                <a class="waves-effect waves-light btn btn-next js-result-form">Xem kết
+                                    quả</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <!-- jQuery -->
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="extras/nouislider.js"></script>
+    <script src="extras/wNumb.js"></script>
+    <script src="consultancy.js"></script>
+    <script>
         $(document).ready(function () {
-          consultancy.initConsultancy();
+            consultancy.initConsultancy();
         });
-      </script>
+    </script>
 </body>
 
 </html>
