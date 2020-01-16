@@ -1,12 +1,12 @@
 /* Fake AI Consultant Site  */
 
 :root {
-  --alt-common-red: #E21F26;
-  --alt-blue-sky: #96d2e3;
-  --alt-common-black: #180D0E;
-  --alt-text-dark-blue: #1F3A55;
-  --alt-common-white: #fff;
-  --alt-blue: #589FEF;
+    --alt-common-red: #E21F26;
+    --alt-blue-sky: #96d2e3;
+    --alt-common-black: #180D0E;
+    --alt-text-dark-blue: #1F3A55;
+    --alt-common-white: #fff;
+    --alt-blue: #589FEF;
 }
 
 
@@ -183,15 +183,38 @@ label.zero-left {
     margin-bottom: 8%;
 }
 
+.budget-slider>p {
+    margin-bottom: 40px;
+}
+
+div#test-slider:not(.noUi-state-drag) .noUi-tooltip {
+    color: transparent;
+}
+
+.noUi-handle .cur-value {
+    position: absolute;
+    top: -20px;
+    font-weight: 600;
+}
+
+div#test-slider.noUi-state-drag .noUi-handle .cur-value {
+    color: transparent;
+}
+
 .result-links {
     margin: 20% auto;
 }
-.btn-blue, .btn-blue:hover, .btn-blue:focus {
-  background-color: var(--alt-blue);
-  color: var(--alt-common-white);
-  font-weight: bold;
-  text-transform: none;
+
+.btn-blue,
+.btn-blue:hover,
+.btn-blue:focus {
+    background-color: var(--alt-blue);
+    color: var(--alt-common-white);
+    font-weight: bold;
+    text-transform: none;
 }
+
+
 /*#endregion*/
 
 
@@ -204,18 +227,22 @@ label.zero-left {
     display: -ms-flexbox;
     display: -webkit-flex;
 }
+
 .flex-column {
     flex-direction: column;
-    -webkit-flex-direction:column;
+    -webkit-flex-direction: column;
 }
+
 .flex-center {
     justify-content: center;
     -webkit-justify-content: center;
 }
+
 .flex-center-item {
-  align-items: center;
-  -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-align: center;
 }
+
 .consultancy {
     height: 100%;
     background-color: var(--alt-blue-sky);
@@ -254,9 +281,10 @@ label.zero-left {
     -webkit-box-align: baseline;
     margin: auto 5px;
 }
-.consultancy .consultancy__content .tab-content .row{
-  margin-bottom: 0;
-  margin-top:25px;
+
+.consultancy .consultancy__content .tab-content .row {
+    margin-bottom: 0;
+    margin-top: 25px;
 }
 
 
@@ -273,42 +301,47 @@ label.zero-left {
     display: -ms-flexbox;
     display: -webkit-flex;
     border-bottom: 3px solid #47515E;
-
 }
 
 .consultancy .consultancy__content .steps-panel li {
     padding: 0;
 }
 
-.consultancy .consultancy__content .steps-panel li.active::after{
-  content: "";
-  height: 3px;
-  background: #E31837;
-  width: 50px;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
+.consultancy .consultancy__content .steps-panel li.active::after {
+    content: "";
+    height: 3px;
+    background: #E31837;
+    width: 50px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
 }
-.consultancy .consultancy__content .steps-panel li.active1::after{
-  content: "";
-  height: 3px;
-  background: #E31837;
-  width: 50px;
-  position: absolute;
-  bottom: -3px;
-  right: 0;
-  left:auto;
+
+.consultancy .consultancy__content .steps-panel li.active1::after {
+    content: "";
+    height: 3px;
+    background: #E31837;
+    width: 50px;
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    left: auto;
 }
-.consultancy .consultancy__content .steps-panel li a{
-  color: var(--alt-common-black);
-  font-weight: bold;
-  cursor: unset;
-  padding:10px 0;
+
+.consultancy .consultancy__content .steps-panel li a {
+    color: var(--alt-common-black);
+    font-weight: bold;
+    cursor: unset;
+    padding: 10px 0;
 }
+
 .step-mrg-left {
-  margin-left: 20%!important;
+    margin-left: 20%!important;
 }
-.consultancy .consultancy__content .steps-panel>li.active>a, .consultancy .consultancy__content .steps-panel>li.active>a:focus, .consultancy .consultancy__content .steps-panel>li.active>a:hover {
+
+.consultancy .consultancy__content .steps-panel>li.active>a,
+.consultancy .consultancy__content .steps-panel>li.active>a:focus,
+.consultancy .consultancy__content .steps-panel>li.active>a:hover {
     color: var(--alt-common-red);
     background-color: transparent;
     font-weight: bold;
@@ -322,22 +355,29 @@ label.zero-left {
 
 
 /*#endregion*/
+
+
 /*#region Responsive*/
+
 @media screen and (max-width:1366px) {
-  .step-mrg-left {
-    margin-left: 13%!important;
-  }
+    .step-mrg-left {
+        margin-left: 13%!important;
+    }
 }
+
 @media screen and (max-width:1280px) {
-  .step-mrg-left {
-    margin-left: 10%!important;
-  }
+    .step-mrg-left {
+        margin-left: 10%!important;
+    }
 }
+
 @media screen and (max-width:1024px) {
-  .step-mrg-left {
-    margin-left: 6%!important;
-  }
+    .step-mrg-left {
+        margin-left: 6%!important;
+    }
 }
+
+
 /*#endregion*/
 
 
