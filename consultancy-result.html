@@ -31,15 +31,16 @@
                 <!-- User's information -->
                 <div class="user-dashboard__information col-lg-3 col-md-4">
                   <div class="main-heading pdd-btm-20">Danh sách giáo viên</div>
-                  <div class="panel-group teacher-list" id="accordion">
+                  <div class="panel-group teacher-list" id="teacherGroup">
                     <div class="panel">
-                      <div class="panel-heading">
-                        <h4 class="panel-title">
-                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                      <div class="panel-heading" data-toggle="collapse" data-parent="#teacherGroup" href="#collapse1">
+                        <div class="panel-title">
+                          <div>
                               <img src="https://via.placeholder.com/30" alt="" class="teacher-avatar">
                               <span class="main-heading">Ms. Nguyễn Thị Bích Thuận</span>
-                            </a>
-                        </h4>
+                          </div>
+                          <div><i class="fa fa-angle-down"></i></div>
+                        </div>
                       </div>
                       <div id="collapse1" class="panel-collapse collapse in">
                         <div class="panel-body">
@@ -51,13 +52,14 @@
                       </div>
                     </div>
                     <div class="panel">
-                      <div class="panel-heading">
-                        <h4 class="panel-title">
-                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                      <div class="panel-heading" data-toggle="collapse" data-parent="#teacherGroup" href="#collapse2">
+                        <div class="panel-title">
+                          <div >
                             <img src="https://via.placeholder.com/30" alt="" class="teacher-avatar">
                             <span class="main-heading">Mr. Lê Ngô Thành Đông</span>
-                        </a>
-                        </h4>
+                          </div>
+                          <div><i class="fa fa-angle-down"></i></div>
+                    </div>
                       </div>
                       <div id="collapse2" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -69,13 +71,14 @@
                       </div>
                     </div>
                     <div class="panel">
-                      <div class="panel-heading">
-                        <h4 class="panel-title">
-                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                      <div class="panel-heading" data-toggle="collapse" data-parent="#teacherGroup" href="#collapse3">
+                        <div class="panel-title">
+                          <div>
                             <img src="https://via.placeholder.com/30" alt="" class="teacher-avatar">
                             <span class="main-heading">Mr. Nguyễn Hưng, BA</span>
-                        </a>
-                        </h4>
+                          </div>
+                          <div><i class="fa fa-angle-down"></i></div>
+                        </div>
                       </div>
                       <div id="collapse3" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -92,24 +95,161 @@
                 <div class="user-dashboard__progress col-lg-6 col-md-8">
                     <!-- Practice plan -->
                     <div class="skill-box">
-                        <div class="skill-heading flex-box flex-center-item flex-space-between">
+                        <div class="skill-heading flex-box flex-center-item">
                             <div class="main-heading blue">Lớp 1-1</div>
+                            <div data-toggle="modal"  class="btn-dark-square mrg-left-20 flex-box flex-center-item">Your guideline</div>
                         </div>
-                        <div class="skill-recent-activities">
-                            <div class="flex-box flex-center-item flex-space-between">
-                                <div class="mid-heading-light-small mrg-vertical-10">Exercises</div>
-                        <div class="flex-box vertical-flex">
-                            <div class="col-lg-12 col-md-12 col-sm-12 no-pdd-left mobile-pdd">
-                                <div class="col-md-12 col-lg-6 no-pdd-left free-exercise-item js-item-id-@Model.ExamInstanceId" data-role="instance" data-state="0" data-id="@Model.ExamInstanceId">
-                                    <div class="free-exercise-item-desc">
-                                        <span class="free-exercise-item-icon">@Html.Raw(faIcon)</span>
-                                        <span class="free-exercise-item-name js-text">@name</span>
-                                        <div class="free-exercise-item-name-full marquee js-text"><span class="marquee__content">@name</span></div>
+                        <div class="flex-box flex-center-item">
+                            <div class="statistics-box flex-box flex-column flex-center-item mrg-vertical-10">
+                                <div>Tổng thời gian</div>
+                                <div class="estimated-duration">27.5 tuần</div>
+                                <div>2 giờ/buổi</div>
+                            </div>
+                            <div class="statistics-total-box flex-box flex-column flex-center-item mrg-vertical-10">
+                                <div>Tổng học phí</div>
+                                <div class="estimated-duration">105,000,000</div>
+                            </div>
+                        </div>
+                        <div class="flex-box course1">
+                            <div class="flex-box flex-column progress-item">
+                                <div>4.0</div>
+                                <div class="progress-bar saving green"></div>
+                                <div>
+                                    <div class="flex-box flex-column">
+                                        <div>Pre-Found</div>
+                                        <div>21,000,000</div>
                                     </div>
                                 </div>
                             </div>
-                        </div>        
+                            <div class="flex-box flex-column progress-item">
+                                <div>4.0</div>
+                                <div class="progress-bar saving green">20 tuần</div>
+                                <div>
+                                    <div class="flex-box flex-column">
+                                        <div>Pre-Found</div>
+                                        <div>21,000,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-box flex-column progress-item">
+                                <div>4.0</div>
+                                <div class="progress-bar saving green"></div>
+                                <div>
+                                    <div class="flex-box flex-column">
+                                        <div>Pre-Found</div>
+                                        <div>21,000,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-box flex-column progress-item">
+                                <div>4.0</div>
+                                <div class="progress-bar saving green"></div>
+                                <div>
+                                    <div class="flex-box flex-column">
+                                        <div>Pre-Found</div>
+                                        <div>21,000,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-box flex-column progress-item">
+                                <div>4.0</div>
+                                <div class="progress-bar actual red">7.5 tuần</div>
+                                <div>
+                                    <div class="flex-box flex-column">
+                                        <div>Pre-Found</div>
+                                        <div>21,000,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-box flex-column progress-item">
+                                <div>4.0</div>
+                                <div class="progress-bar actual blank"></div>
+                                <div>
+                                    <div class="flex-box flex-column">
+                                        <div>Pre-Found</div>
+                                        <div>21,000,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="skill-box">
+                        <div class="skill-heading flex-box flex-center-item">
+                            <div class="main-heading blue">Lớp 1-5</div>
+                            <div data-toggle="modal"  class="btn-dark-square mrg-left-20 flex-box flex-center-item">Your guideline</div>
+                        </div>
+                        <div class="flex-box flex-center-item">
+                            <div class="statistics-box flex-box flex-column flex-center-item mrg-vertical-10">
+                                <div>Tổng thời gian</div>
+                                <div class="estimated-duration">27.5 tuần</div>
+                                <div>2 giờ/buổi</div>
+                            </div>
+                            <div class="statistics-total-box flex-box flex-column flex-center-item mrg-vertical-10">
+                                <div>Tổng học phí</div>
+                                <div class="estimated-duration">105,000,000</div>
+                            </div>
+                        </div>
+                        <div class="flex-box course1">
+                            <div class="flex-box flex-column progress-item">
+                                <div>4.0</div>
+                                <div class="progress-bar saving green"></div>
+                                <div>
+                                    <div class="flex-box flex-column">
+                                        <div>Pre-Found</div>
+                                        <div>21,000,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-box flex-column progress-item">
+                                <div>4.0</div>
+                                <div class="progress-bar saving green">20 tuần</div>
+                                <div>
+                                    <div class="flex-box flex-column">
+                                        <div>Pre-Found</div>
+                                        <div>21,000,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-box flex-column progress-item">
+                                <div>4.0</div>
+                                <div class="progress-bar saving green"></div>
+                                <div>
+                                    <div class="flex-box flex-column">
+                                        <div>Pre-Found</div>
+                                        <div>21,000,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-box flex-column progress-item">
+                                <div>4.0</div>
+                                <div class="progress-bar saving green"></div>
+                                <div>
+                                    <div class="flex-box flex-column">
+                                        <div>Pre-Found</div>
+                                        <div>21,000,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-box flex-column progress-item">
+                                <div>4.0</div>
+                                <div class="progress-bar actual red">7.5 tuần</div>
+                                <div>
+                                    <div class="flex-box flex-column">
+                                        <div>Pre-Found</div>
+                                        <div>21,000,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-box flex-column progress-item">
+                                <div>4.0</div>
+                                <div class="progress-bar actual blank"></div>
+                                <div>
+                                    <div class="flex-box flex-column">
+                                        <div>Pre-Found</div>
+                                        <div>21,000,000</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- Practice plan -->
@@ -621,6 +761,7 @@
       <script>
         $(document).ready(function () {
           consultancy.initConsultancy();
+
         });
 
       </script>

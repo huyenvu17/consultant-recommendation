@@ -9,8 +9,18 @@ var consultancy = (function () {
         result_form();
         initTabs();
         initTimeTable();
+        toggleIcon();
     };
 
+    function toggleIcon() {
+        $(".user-dashboard__information .teacher-list .panel .panel-heading").click(function(){
+            $(".user-dashboard__information .teacher-list .panel .panel-heading").each(function(){
+              $(this).removeClass("active");
+            });
+            $(this).addClass("active");
+        });
+    }
+ 
     function initTabs() {
         setTimeout(function(){
             $('#step1').find('.skeleton-loading').css('display', 'none');
