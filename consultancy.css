@@ -204,7 +204,18 @@ label.zero-left {
     display: -ms-flexbox;
     display: -webkit-flex;
 }
-
+.flex-column {
+    flex-direction: column;
+    -webkit-flex-direction:column;
+}
+.flex-center {
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.flex-center-item {
+  align-items: center;
+  -webkit-box-align: center;
+}
 .consultancy {
     height: 100%;
     background-color: var(--alt-blue-sky);
