@@ -226,7 +226,7 @@ var consultancy = (function () {
     var tooltipFormats = function(a){
         if (a < '3000000')
             return '< 3,000,000 VNĐ';
-        else if (a == '12500000')
+        else if (a > '12000000')
             return '> 12,000,000 VNĐ';
             else return wNumb({
                 decimals: 0,
