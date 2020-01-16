@@ -31,18 +31,18 @@
                 <!-- User's information -->
                 <div class="user-dashboard__information col-lg-3 col-md-4">
                   <div class="main-heading pdd-btm-20">Danh sách giáo viên</div>
-                  <div class="panel-group teacher-list" id="teacherGroup">
+                <div class="wrapper center-block">
+                    <div class="panel-group teacher-list" id="teacherList" role="tablist" aria-multiselectable="true">
                     <div class="panel">
-                      <div class="panel-heading" data-toggle="collapse" data-parent="#teacherGroup" href="#collapse1">
-                        <div class="panel-title">
-                          <div>
-                              <img src="https://via.placeholder.com/30" alt="" class="teacher-avatar">
+                      <div class="panel-heading active" role="tab" id="headingteacher1">
+                        <h4 class="panel-title">
+                          <a role="button" data-toggle="collapse" data-parent="#teacherList" href="#teacher1" aria-expanded="true" aria-controls="teacher1">
+                            <img src="https://via.placeholder.com/30" alt="" class="teacher-avatar">
                               <span class="main-heading">Ms. Nguyễn Thị Bích Thuận</span>
-                          </div>
-                          <div><i class="fa fa-angle-down"></i></div>
-                        </div>
+                          </a>
+                        </h4>
                       </div>
-                      <div id="collapse1" class="panel-collapse collapse in">
+                      <div id="teacher1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingteacher1">
                         <div class="panel-body">
                             <div>IELTS 7.5</div>
                             <div>Social Sciences and Humanities Uni. HCM</div>
@@ -52,16 +52,16 @@
                       </div>
                     </div>
                     <div class="panel">
-                      <div class="panel-heading" data-toggle="collapse" data-parent="#teacherGroup" href="#collapse2">
-                        <div class="panel-title">
-                          <div >
+                      <div class="panel-heading" role="tab" id="headingteacher2">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#teacherList" href="#teacher2" aria-expanded="false" aria-controls="teacher2">
                             <img src="https://via.placeholder.com/30" alt="" class="teacher-avatar">
                             <span class="main-heading">Mr. Lê Ngô Thành Đông</span>
-                          </div>
-                          <div><i class="fa fa-angle-down"></i></div>
-                    </div>
+                            
+                          </a>
+                        </h4>
                       </div>
-                      <div id="collapse2" class="panel-collapse collapse">
+                      <div id="teacher2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingteacher2">
                         <div class="panel-body">
                             <div>IELTS 7.5</div>
                             <div>Social Sciences and Humanities Uni. HCM</div>
@@ -71,16 +71,15 @@
                       </div>
                     </div>
                     <div class="panel">
-                      <div class="panel-heading" data-toggle="collapse" data-parent="#teacherGroup" href="#collapse3">
-                        <div class="panel-title">
-                          <div>
+                      <div class="panel-heading" role="tab" id="headingteacher3">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#teacherList" href="#teacher3" aria-expanded="false" aria-controls="teacher3">
                             <img src="https://via.placeholder.com/30" alt="" class="teacher-avatar">
                             <span class="main-heading">Mr. Nguyễn Hưng, BA</span>
-                          </div>
-                          <div><i class="fa fa-angle-down"></i></div>
-                        </div>
+                          </a>
+                        </h4>
                       </div>
-                      <div id="collapse3" class="panel-collapse collapse">
+                      <div id="teacher3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingteacher3">
                         <div class="panel-body">
                             <div>IELTS 7.5</div>
                             <div>Social Sciences and Humanities Uni. HCM</div>
@@ -90,14 +89,15 @@
                       </div>
                     </div>
                   </div>
-              </div>
+                  </div>
+                </div>
                 <!-- User's learning progress -->
                 <div class="user-dashboard__progress col-lg-6 col-md-8">
                     <!-- Practice plan -->
                     <div class="skill-box">
                         <div class="skill-heading flex-box flex-center-item">
                             <div class="main-heading blue">Lớp 1-1</div>
-                            <div data-toggle="modal"  class="btn-dark-square mrg-left-20 flex-box flex-center-item">Your guideline</div>
+                            <div data-toggle="modal"  class="btn-dark-square mrg-left-20 flex-box flex-center-item">Recommendation</div>
                         </div>
                         <div class="flex-box flex-center-item">
                             <div class="statistics-box flex-box flex-column flex-center-item mrg-vertical-10">
@@ -176,7 +176,6 @@
                     <div class="skill-box">
                         <div class="skill-heading flex-box flex-center-item">
                             <div class="main-heading blue">Lớp 1-5</div>
-                            <div data-toggle="modal"  class="btn-dark-square mrg-left-20 flex-box flex-center-item">Your guideline</div>
                         </div>
                         <div class="flex-box flex-center-item">
                             <div class="statistics-box flex-box flex-column flex-center-item mrg-vertical-10">
@@ -252,16 +251,15 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Practice plan -->
                     <div class="skill-box js-guideline-practices-book">
                         <div class="skill-heading flex-box flex-center-item flex-space-between">
                             <div class="main-heading blue">Bài tập về nhà</div>
-                            <div class="waves-effect waves-light btn btn-blue js-next">
+                            <a href="http://starkcamp.com" class="link-logo"><img src="starkcamp-logo-red.svg" alt=""></a>
+                            <!-- <div class="waves-effect waves-light btn btn-blue js-next">
                                 Luyện tập
-                            </div>
+                            </div> -->
                         </div>
 
-                            <!-- Free practice excercises and tests - new design updated -->
                                 <div class="mid-heading-light mrg-vertical-10">Exercises</div>
                                     <div class="flex-box vertical-flex">
                                         <div class="col-lg-12 col-md-12 col-sm-12 no-pdd-left mobile-pdd">
@@ -550,20 +548,15 @@
                                                 </div>
  
                                             </div>
-                                            <!-- User's activities -->
                                             <div class="user-dashboard__activities col-lg-3 col-md-12 skill-box">
                                             
-                                                <!-- Book for you -->
                                                 <div id="BookForYou" class="skilbox-child" style="height: max-content;">
 
 
-                                                    <div class="main-heading pdd-top-25">Books for you</div>
+                                                    <div class="main-heading pdd-top-25">Thư viện sách</div>
                                                     <div class="tab-pane" id="root-library">
                                                         <ul id="bookLibraryForYou" class="row book-shelf">
                                                                     <div class="book-container" style="width: 191.5px;">
-                                                    
-                                                                        
-                                                    
                                                     <div class="media box-overlay">
                                                         <div class="media-body text-center">
                                                     
@@ -753,7 +746,7 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="extras/nouislider.js"></script>
+      <!-- <script src="extras/nouislider.js"></script> -->
       <script src="extras/wNumb.js"></script>
       <script src="dashboard/marquee.js"></script>
       <script src="consultancy.js"></script>
@@ -761,7 +754,13 @@
       <script>
         $(document).ready(function () {
           consultancy.initConsultancy();
-
+          $('.panel-collapse').on('show.bs.collapse', function () {
+            $(this).siblings('.panel-heading').addClass('active');
+          });
+        
+          $('.panel-collapse').on('hide.bs.collapse', function () {
+            $(this).siblings('.panel-heading').removeClass('active');
+          });
         });
 
       </script>

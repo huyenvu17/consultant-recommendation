@@ -3,7 +3,6 @@ var consultancy = (function () {
         dob_picker();
         item_select();
         text_input_count();
-        budget_plan();
         personal_info();
         personalized_learning_course();
         result_form();
@@ -13,11 +12,11 @@ var consultancy = (function () {
     };
 
     function toggleIcon() {
-        $(".user-dashboard__information .teacher-list .panel .panel-heading").click(function(){
-            $(".user-dashboard__information .teacher-list .panel .panel-heading").each(function(){
-              $(this).removeClass("active");
-            });
-            $(this).addClass("active");
+        $('.teacher-list .panel .panel-collapse').on('show.bs.collapse', function () {
+            $(this).siblings('.teacher-list .panel .panel-heading').addClass('active');
+          });
+        $('.teacher-list .panel .panel-collapse').on('hide.bs.collapse', function () {
+          $(this).siblings('.teacher-list .panel .panel-heading').removeClass('active');
         });
     }
  
@@ -241,7 +240,8 @@ var consultancy = (function () {
 
     return {
         initConsultancy,
-        getTimeTableData
+        getTimeTableData,
+        budget_plan
     }
 
 })();

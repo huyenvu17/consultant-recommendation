@@ -154,19 +154,7 @@
 .pdd-btm-20 {
     padding-bottom: 20px !important;
 }
-.teacher-list .panel-title a:hover, .teacher-list .panel-title a:active, .teacher-list .panel-title a:focus {
-    text-decoration: none;
-}
-.teacher-list .panel-title {
-    display: flex;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    justify-content: space-between;
-    -webkit-justify-content:space-between;
 
-}
 /*#endregion*/
 
 /*#region 2. User Information*/
@@ -630,26 +618,7 @@
     text-align: left;
 }
 
-.user-dashboard__information .teacher-list .panel .panel-heading {
-    background-color: #fff;
-    cursor: pointer;
-}
-.user-dashboard__information .teacher-list .panel .panel-collapse .panel-body {
-    border-top: none;
-    padding-left: 12%;
-}
-.user-dashboard__information .teacher-list .panel .panel-heading .panel-title .fa{
-    transform: translateY(-50%) rotate(180deg);
-  }
-  .accordion-up {
-    background: url("images/accordion-up.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    padding: 5px 20px;
-  }
-  
-  .accordion-down {
-    background: url("images/accordion-down.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    padding: 5px 20px;
-  }
+
 /*#endregion*/
 
 /*#region 3. Learning Progress*/
@@ -1375,6 +1344,54 @@
 .blank {
     background-color: transparent;
     box-shadow: none;
+}
+  
+.user-dashboard__information .teacher-list .panel .panel-heading {
+    padding: 0;
+    border:0;
+    background-color: #fff;
+}
+.user-dashboard__information .teacher-list .panel .panel-heading .panel-title>a, .user-dashboard__information .teacher-list .panel .panel-heading .panel-title>a:active{
+    display:block;
+    padding:15px;
+  color:#000;
+  font-size:16px;
+  font-weight:bold;
+    text-decoration:none;
+}
+.user-dashboard__information .teacher-list .panel .panel-heading  a:before {
+   content: "\f078";
+    font-family: "Font Awesome 5 Free"; /* change like this */
+   float: right;
+}
+.user-dashboard__information .teacher-list .panel .panel-heading.active a:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+} 
+.user-dashboard__information .teacher-list .panel .panel-collapse .panel-body {
+    border-top: none;
+    padding-left: 12%;
+    color: #000;
+}
+.user-dashboard__information .teacher-list .panel .panel-heading .panel-title .fa{
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .link-logo {
+      width: 20%;
+  }
+  .link-logo img {
+    width: 100%;
+}
+.link-logo:hover {
+    -webkit-transition: all 100ms ease-in-out;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 100ms ease-in-out;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 100ms ease-in-out;
+    -moz-transform: scale(1.1);
+    transition: all 100ms ease-in-out;
+    transform: scale(1.1);
 }
 /*#endregion*/
 /*#region 6. Responsive*/
