@@ -331,15 +331,20 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="input-field col s6">
-                                    <input placeholder="" id="desiredTime" type="text" required class="validate">
-                                    <label for="desiredTime">Thời gian cần lấy bằng <span
-                                            class="label-required">*</span></label>
-                                    <span class="helper-text" data-error="vui lòng nhập thời gian cần lấy bằng"></span>
+                                <div class="input-field col s6 no-mrg">
+                                    <div class="input-field inline" style="width:60%">
+                                        <input placeholder="" id="selfStudyTime" type="number" min="1" required class="validate">
+                                        <label for="selfStudyTime" class="zero-left">Thời gian cần lấy bằng
+                                            <span class="label-required">*</span></label>
+                                        <span class="helper-text" data-error="Vui lòng nhập thời gian càn lấy bằng"></span>
+                                    </div>
+                                    <div class="input-field inline inline-text">
+                                        <span>tháng</span>
+                                    </div>
                                 </div>
                                 <div class="input-field col s6">
                                     <select id="branch" required class="validate">
-                                        <option value="" disabled>Chọn nghề nghiệp</option>
+                                        <option value="" disabled>Chọn chi nhánh</option>
                                         <option value="1">Phan Chu Trinh</option>
                                         <option value="2">Hoàng Văn Thụ</option>
                                         <option value="3">Bàu Cát</option>
@@ -674,7 +679,7 @@
                             </div>
                             <div class="row text-center">
                                 <a href="#0" class="back-link btn-prev">Trở về</a>
-                                <a class="waves-effect waves-light btn btn-next js-personal-info js-next">Tiếp</a>
+                                <a class="waves-effect waves-light btn btn-next js-personal-info js-next">Xem lộ trình</a>
                             </div>
                         </div>
                         <div class="col s12  step-content" style="display: none">
@@ -817,7 +822,7 @@
                             </div>
                             <div class="row text-center">
                                 <a href="#0" class="back-link btn-prev">Trở về</a>
-                                <a class="waves-effect waves-light btn btn-next js-personal-info js-result-form">Tiếp</a>
+                                <a class="waves-effect waves-light btn btn-next js-personal-info js-result-form">Xem lộ trình</a>
                             </div>
                         </div>
                     </div>
@@ -828,7 +833,7 @@
                                 <img src="logo-alt.svg" alt="">
                             </div>
                             <div class="row text-center result-links">
-                                <a href="#0" class="back-link btn-reload">làm lại khảo sát</a>
+                                <a href="#0" class="back-link btn-reload">Làm lại khảo sát</a>
                                 <a class="waves-effect waves-light btn btn-next js-result-form">Xem kết
                                     quả</a>
                             </div>
@@ -847,6 +852,7 @@
                 <script>
                     $(document).ready(function() {
                         consultancy.initConsultancy();
+                        consultancy.budget_plan();
                     });
                 </script>
 </body>
