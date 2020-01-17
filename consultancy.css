@@ -29,7 +29,9 @@
     font-weight: normal;
 }
 
-
+.input-field input,.input-field textarea {
+    margin-top:10px!important;
+}
 /* label focus color */
 
 .consultancy .consultancy__content .tab-content .input-field input[type=text]:focus+label {
@@ -61,7 +63,15 @@
 .consultancy .consultancy__content .tab-content .input-field input:not(.browser-default):focus:not([readonly])+label {
     color: var(--alt-text-dark-blue);
 }
+input[type="checkbox"]:checked+span:not(.lever):before {
+    border-right: 2px solid var(--alt-blue-sky);
+    border-bottom: 2px solid var(--alt-blue-sky);
 
+}
+.multiple-select-dropdown li span label {
+    color: var(--alt-common-black);
+    font-weight: normal;
+}
 
 /* invalid color */
 
@@ -136,7 +146,10 @@
 .consultancy .consultancy__content .tab-content input[type="radio"].with-gap:checked+span:after {
     background-color: var(--alt-text-dark-blue);
 }
-
+.consultancy__content .tab-content input[type="radio"].with-gap:checked+span {
+    color: var(--alt-text-dark-blue);
+    opacity: 1;
+}
 .consultancy .consultancy__content .tab-content input[type="radio"]:checked+span:after,
 .consultancy .consultancy__content .tab-content input[type="radio"].with-gap:checked+span:before,
 .consultancy .consultancy__content .tab-content input[type="radio"].with-gap:checked+span:after,
@@ -252,7 +265,7 @@ div#test-slider.noUi-state-drag .noUi-handle .cur-value {
     padding: 2%;
 }
 
-.consultancy .consultancy__logo {
+.consultancy__logo {
     width: 100px;
     margin: auto;
 }
