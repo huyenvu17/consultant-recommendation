@@ -210,7 +210,11 @@ div#test-slider:not(.noUi-state-drag) .noUi-tooltip {
     font-weight: 600;
 }
 
-div#test-slider.noUi-state-drag .noUi-handle .cur-value {
+div#test-slider.noUi-state-drag .noUi-handle.noUi-active .cur-value {
+    color: transparent;
+}
+
+div#test-slider.noUi-state-drag .noUi-handle:not(.noUi-active) .noUi-tooltip {
     color: transparent;
 }
 
